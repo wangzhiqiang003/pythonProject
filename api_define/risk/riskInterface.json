@@ -1,0 +1,71 @@
+{
+  "api_list": [
+    {
+      "api_id": "001",
+      "requestMethod": "POST",
+      "api_name": "白名单新增",
+      "api_url": "/api/riskApproval/selection/preCredit/enterprise/create",
+      "default_headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+
+      "defaultParam": {
+  "tradeType": 12,
+  "tradeScope": 5,
+  "channelCode": "XSH001",
+  "customClassify": "0",
+  "customerName": "sdfffsdfd",
+  "certificateType": "A18",
+  "certificateCode": "510311199003235699",
+  "preCreditResult": 1,
+  "preCreditAmount": "11111",
+  "repaymentMethods": [
+    {
+      "loanPeriods": [
+        "1",
+        "100"
+      ],
+      "periodType": "1",
+      "repaymentType": "30"
+    }
+  ],
+  "yearRate": "10",
+  "closingTime": "2025-08-30 23:59:59",
+  "status": 1,
+  "preCreditEnterpriseInfo": {
+    "organizationType": "1",
+    "industryType": 1,
+    "tradeType": 7,
+    "legalPersonName": "账单",
+    "legalPersonMobile": "13568895445",
+    "legalPersonCertType": "B01",
+    "legalPersonCertNum": "510311199003234512",
+    "loanBankCreateName": "中国建设银行平顶山建设路支行",
+    "loanBankName": "中国建设银行",
+    "loanBankCreateCode": "105495000020",
+    "loanBankCreateProvence": "河南省",
+    "loanBankCreateCity": "平顶山市",
+    "loanBankCustomerName": "是发范德萨",
+    "loanBankCardNum": "1122121212",
+    "establishDate": "2021-08-11",
+    "registeredCapital": "200000",
+    "registeredAddr": "1235",
+    "tradeScope": 7,
+    "channelCode": "XSH001",
+    "loanBankCode": "CCB"
+  }
+}
+
+    },
+
+      {
+      "api_id": "002",
+      "requestMethod": "POST",
+      "api_name": "白名单新增",
+      "api_url": "/api/riskApproval/selection/preCredit/enterprise/create",
+      "default_headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    }
+  ]
+}

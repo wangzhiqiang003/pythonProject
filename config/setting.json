@@ -1,0 +1,12 @@
+{
+
+  "env": {
+      "baseUrl": {
+      "dev": "http://api-dev.runthinkenv.com",
+      "uat": "https://api.runthink.xyz"
+    }
+  }
+
+
+
+}
