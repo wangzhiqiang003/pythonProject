@@ -67,7 +67,7 @@ class CaseAssemble:
         apiInfo = self.get_api_by_apiId(apiId)
         return apiInfo
 
-    @replacedata
+    @replace_data
     def addHeader(self, item):
         apiInfo = self.getApiInfo(item)
         tempparam = eval(apiInfo['defaultHeader'])
@@ -80,7 +80,7 @@ class CaseAssemble:
         self.addUrl(item)
         self.res.append(item)
 
-    @replacedata
+    @replace_data
     def addParam(self, item):
         apiInfo = self.getApiInfo(item)
         tempparam = eval(apiInfo['defualt_param'])
