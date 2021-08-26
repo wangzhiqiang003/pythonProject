@@ -5,10 +5,13 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/risk" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Utils/base_data_utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Utils/case_utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/case" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/config" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/run" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Utils/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/suite" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

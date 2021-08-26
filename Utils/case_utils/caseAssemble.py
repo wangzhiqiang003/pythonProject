@@ -1,43 +1,13 @@
 import json
+import re
+import jsonpath
+import addict
+import re
+import importlib
+import globalData
 
-
-def replace_data(fn):
-    def func(*args, **kwargs):
-        print("==================================================")
-        print(args[1])
-
-        print("==================================================")
-        return fn(*args, **kwargs)
-
-    return func
-
-def get_target_value(key, dic, tmp_list):
-    """
-    :param key: 目标key值
-    :param dic: JSON数据
-    :param tmp_list: 用于存储获取的数据
-    :return: list
-    """
-    if not isinstance(dic, dict) or not isinstance(tmp_list, list):  # 对传入数据进行格式校验
-        return 'argv[1] not an dict or argv[-1] not an list '
-
-    if key in dic.keys():
-        tmp_list.append(dic[key])  # 传入数据存在则存入tmp_list
-    else:
-        for value in dic.values():  # 传入数据不符合则对其value值进行遍历
-            if isinstance(value, dict):
-                get_target_value(key, value, tmp_list)  # 传入数据的value值是字典，则直接调用自身
-            elif isinstance(value, (list, tuple)):
-                _get_value(key, value, tmp_list)  # 传入数据的value值是列表或者元组，则调用_get_value
-    return tmp_list
-
-
-def _get_value(key, val, tmp_list):
-    for val_ in val:
-        if isinstance(val_, dict):
-            get_target_value(key, val_, tmp_list)  # 传入数据的value值是字典，则调用get_target_value
-        elif isinstance(val_, (list, tuple)):
-            _get_value(key, val_, tmp_list)   # 传入数据的value值是列表或者元组，则调用自身
+myDataUtils = importlib.import_module('Utils.base_data_utils.DataUtils', '.')
+from operator import methodcaller
 
 
 class CaseAssemble:
@@ -65,28 +35,114 @@ class CaseAssemble:
     def getApiInfo(self, item):
         apiId = self.get_apiId_from_case_info(item)
         apiInfo = self.get_api_by_apiId(apiId)
+        item['method'] = apiInfo['method']
+
         return apiInfo
 
-    @replace_data
+    def sign_data(self, item):
+        param = item['params']
+        apiInfo = self.getApiInfo(item)
+        new_dict = addict.Dict(apiInfo)
+        user_strategy = apiInfo['signature_strategy']
+        signature_strategylist = user_strategy.split(',') if user_strategy else {}
+
+        signature_strategylist = list(map(lambda x: 'new_dict' + x[1:], signature_strategylist))
+        signature_strategylist = list(map(lambda x: re.sub(r'\$', '', x), signature_strategylist))
+        for x in signature_strategylist:
+            key, value = x.split("=")
+
+
+            res = re.findall(r'\{__(.*)\(\)?\}.*', value)
+            if res:
+                fun = res[0]
+
+                obj = getattr(myDataUtils, 'DataUtils')()
+                md = getattr(obj, fun)
+                value = md(item['params'])  # 这里调用方法，可以传入参数
+                new_dict = addict.Dict(item['headers'])
+
+                new_dict[key.split('.')[1]] = value
+                item['headers'] = new_dict
+                globalData.globalsData[key.split('.')[-1]] = value
+
+
     def addHeader(self, item):
         apiInfo = self.getApiInfo(item)
+
         tempparam = eval(apiInfo['defaultHeader'])
-        tempparam.update(eval(str(item['headers'])))
-        item['headers'] = tempparam
+
+        user_header = item['headers']
+        if user_header:
+            new_dict = addict.Dict(tempparam)
+            list_param = user_header.split(',') if user_header else {}
+            list_param = list(map(lambda x: 'new_dict' + x[1:], list_param))
+            list_param = list(map(lambda x: re.sub(r'\$', '', x), list_param))
+            for x in list_param:
+                key, value = x.split("=")
+
+                res = re.findall(r'\{__(.*)\(\)?\}.*', value)
+                if res:
+
+                    fun = res[0]
+
+                    # value = methodcaller(fun)(DataUtils)
+                    obj = getattr(myDataUtils, 'DataUtils')()
+                    md = getattr(obj, fun)
+                    value = md()  # 这里调用方法，可以传入参数
+                    globalData.globalsData[key.split('.')[-1]] = value
+
+                else:
+                    pass
+
+                x = '='.join((str(key), value))
+                exec(x)
+            item['headers'] = new_dict
+        else:
+            item['headers'] = tempparam
 
     def handle(self, item):
+
         self.addHeader(item)
         self.addParam(item)
         self.addUrl(item)
+        self.sign_data(item)
         self.res.append(item)
 
-    @replace_data
     def addParam(self, item):
         apiInfo = self.getApiInfo(item)
         tempparam = eval(apiInfo['defualt_param'])
-        tempparam.update(eval(item['params']))
-        item['params'] = tempparam
-        print(item)
+
+        user_param = item['params']
+        if user_param:
+            new_dict = addict.Dict(tempparam)
+            list_param = user_param.split(',') if user_param else {}
+            list_param = list(map(lambda x: 'new_dict' + x[1:], list_param))
+            list_param = list(map(lambda x: re.sub(r'\$', '', x), list_param))
+            for x in list_param:
+                key, value = x.split('=')
+
+                # 从字典中去找对应的变量进行替换  '${#customerName}'
+                resdict = re.findall(r'\{#(.*)\}', value)
+                if resdict:
+                    value = globalData.globalsData[resdict[0]]
+                    x = '='.join((str(key), repr(value)))
+                    exec(x)
+                res = re.findall(r'\{__(.*)\(\)?\}.*', value)
+
+                # 调用随机数据生成函数来替换变量
+                if res:
+                    fun = res[0]
+
+                    obj = getattr(myDataUtils, 'DataUtils')()
+                    md = getattr(obj, fun)
+                    value = md()  # 这里调用方法，可以传入参数
+                    x = '='.join((str(key), repr(value)))
+                    globalData.globalsData[key.split('.')[-1]] = value
+
+                exec(x)
+            item['params'] = new_dict
+        else:
+            item['params'] = tempparam
 
     def cfg_case(self):
         for item in self.caselist:
