@@ -50,26 +50,21 @@ class CaseAssemble:
         signature_strategylist = list(map(lambda x: re.sub(r'\$', '', x), signature_strategylist))
         for x in signature_strategylist:
             key, value = x.split("=")
-
-
             res = re.findall(r'\{__(.*)\(\)?\}.*', value)
             if res:
                 fun = res[0]
-
                 obj = getattr(myDataUtils, 'DataUtils')()
                 md = getattr(obj, fun)
                 value = md(item['params'])  # 这里调用方法，可以传入参数
                 new_dict = addict.Dict(item['headers'])
-
                 new_dict[key.split('.')[1]] = value
                 item['headers'] = new_dict
                 globalData.globalsData[key.split('.')[-1]] = value
-
-
     def addHeader(self, item):
         apiInfo = self.getApiInfo(item)
-
-        tempparam = eval(apiInfo['defaultHeader'])
+        orginHeader =apiInfo['defaultHeader']
+        orginHeader = orginHeader if orginHeader else '{}'
+        tempparam = eval(orginHeader)
 
         user_header = item['headers']
         if user_header:
@@ -110,8 +105,10 @@ class CaseAssemble:
 
     def addParam(self, item):
         apiInfo = self.getApiInfo(item)
-        tempparam = eval(apiInfo['defualt_param'])
 
+        orginParam =apiInfo['defualt_param']
+        orginParam = orginParam if orginParam else '{}'
+        tempparam = eval(orginParam)
         user_param = item['params']
         if user_param:
             new_dict = addict.Dict(tempparam)
@@ -156,5 +153,5 @@ class CaseAssemble:
 
     def getEnv(self, item):
         envId = item['envId']
-        envInfo = list(filter(lambda x: x['envId'], self.envList))[0]
+        envInfo = list(filter(lambda x: x['envId'] == envId, self.envList))[0]
         return envInfo['host']

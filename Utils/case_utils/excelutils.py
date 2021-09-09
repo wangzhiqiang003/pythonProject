@@ -26,11 +26,10 @@ class ExcelUtils:
         res = {}
         for sheet_name in self.book.sheetnames:
             res[sheet_name] = self.readall_by_sheet_name(sheet_name)
-        if res['case']:
+        if res['case']:     #过滤掉案例不未Y的数据记录
             temp = res.pop('case')
             temp = list(filter(lambda x: x['isValide'] == 'Y', temp))
             res['case'] = temp
-
         return res
 
     def create_book(self, path):

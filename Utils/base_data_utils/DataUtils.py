@@ -76,7 +76,7 @@ class DataUtils:
 if __name__ == '__main__':
     # print(DataUtils.get_random_name())
     # print(DataUtils.get_random_id())
-    # print(DataUtils.get_bank_no())
+    print(DataUtils.get_bank_no())
     # bankToBin = json.load(open("json/banknametobin.json", 'r', encoding='utf-8'))
     # print(bankToBin)
     #
