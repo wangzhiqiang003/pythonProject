@@ -1,9 +1,12 @@
 import json
+import logging
 import re
 import jsonpath
 import addict
 import re
 import importlib
+
+import dbutils
 import globalData
 
 myDataUtils = importlib.import_module('Utils.base_data_utils.DataUtils', '.')
@@ -60,9 +63,10 @@ class CaseAssemble:
                 new_dict[key.split('.')[1]] = value
                 item['headers'] = new_dict
                 globalData.globalsData[key.split('.')[-1]] = value
+
     def addHeader(self, item):
         apiInfo = self.getApiInfo(item)
-        orginHeader =apiInfo['defaultHeader']
+        orginHeader = apiInfo['defaultHeader']
         orginHeader = orginHeader if orginHeader else '{}'
         tempparam = eval(orginHeader)
 
@@ -98,15 +102,22 @@ class CaseAssemble:
     def handle(self, item):
 
         self.addHeader(item)
-        self.addParam(item)
         self.addUrl(item)
+        self.addParam(item)
         self.sign_data(item)
+
         self.res.append(item)
 
     def addParam(self, item):
+        db = item['fetch_data_from_db']
+        if db:
+            db = eval(db)
+            item["fetch_data_from_db"] = db
+            dbutils.DBHandler(item).query()
+
         apiInfo = self.getApiInfo(item)
 
-        orginParam =apiInfo['defualt_param']
+        orginParam = apiInfo['defualt_param']
         orginParam = orginParam if orginParam else '{}'
         tempparam = eval(orginParam)
         user_param = item['params']
@@ -145,13 +156,17 @@ class CaseAssemble:
         for item in self.caselist:
             self.handle(item)
 
+    # 拼接环境域名和接口URL
     def addUrl(self, item):
         apiInfo = self.getApiInfo(item)
-        baseUrl = self.getEnv(item)
+        baseUrl, dbenv = self.getEnv(item)
         all_url = baseUrl + apiInfo['url']
         item['URL'] = all_url
+        item['DBEnv'] = dbenv
+        logging.info(item)
 
+    # 根据环境id获取环境名称
     def getEnv(self, item):
         envId = item['envId']
         envInfo = list(filter(lambda x: x['envId'] == envId, self.envList))[0]
-        return envInfo['host']
+        return envInfo['host'] if envInfo['host'] else {}, envInfo['dbconfig'] if envInfo['dbconfig'] else {}
