@@ -2,7 +2,6 @@
 # _*_ coding:utf-8 _*_
 __author__ = 'YinJia'
 
-import os, sys
 
 from newReport import new_report
 from config import setting
