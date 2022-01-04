@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
-__author__ = 'YinJia'
-
+__author__ = '王智强'
 
 from newReport import new_report
 from config import setting
@@ -9,8 +8,6 @@ from time import *
 from package.HTMLTestRunner import *
 import unittest
 from suite import *
-
-# sys.path.append(os.path.dirname(__file__))
 
 
 def add_case(test_path=setting.TEST_CASE):

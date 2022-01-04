@@ -3,9 +3,12 @@ import pprint
 import time
 import unittest
 
+
 import ddt
 import logging
 import json
+
+import caseAssemble
 import setting
 from caseAssemble import CaseAssemble
 from case_utils.excelutils import *
@@ -15,45 +18,69 @@ from newReport import new_report
 from package.HTMLTestRunner import HTMLTestRunner
 from case_utils.assertUtils import *
 import logging
-
-logging.basicConfig(format='%(asctime)s - %(pathname)s[line:%(lineno)d] '
-                           '- %(levelname)s: %(message)s', level=logging.INFO)
+import redisutils
+logging.basicConfig(level=logging.DEBUG,
+                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+                datefmt='%a, %d %b %Y %H:%M:%S',
+                filename='myapp.log',
+                filemode='w')
 e = ExcelUtils("../case/API_CASE_INFO.xlsx")
 t = e.assemble_info()
 bean = CaseAssemble(t)
-bean.cfg_case()
-testData = bean.res
-print(testData)
+# bean.cfg_case()   #将案例的组装放到具体的执行中去，以便精准的获取到上下文的参数
+testData = t
+r = None
+response = {}
+req = {}
 
 
 @ddt.ddt
 class Runner(unittest.TestCase):
+
     def setUp(self):
         self.s = requests.session()
 
     def tearDown(self):
+        logging.info('案例执行完毕，参数打印如下: 请求参数')
+        logging.info(json.dumps(req, indent=2, sort_keys=True, ensure_ascii=False))
+        if self.r:
+            if response:
+                logging.info("响应参数")
+                logging.info(json.dumps(response, indent=2, sort_keys=True, ensure_ascii=False))
+                if self.r:
+                    traceId = self.r.headers.setdefault('traceId', None)
+                    logging.info(f"traceId:{traceId}")
+            # 处理请求参数、响应参数中需要保存得变量到redis
+        CaseAssemble.save_req_res(self.casedata['save_req_res'], req, self.r)
+
+        delayTime = int(self.casedata['delayTime'])
+        logging.info('延迟时间为{}'.format(delayTime))
+        time.sleep(delayTime)
+
+    @classmethod
+    def setUpClass(cls):
         pass
 
-    @ddt.data(*testData)
+    @classmethod
+    def tearDownClass(cls):
+        redisutils.myredis.clean_redis
+        logging.info('结束执行' + str(time.time()))
+
+    @ddt.data(*testData['case'])
     def test_info(self, casedata):  # write your api  method
-        # method = casedata['method']
-        # url = casedata['URL']
-        # param = casedata['params']
-        # headers = casedata['headers']
-
+        logging.info('>*' * 45 + f'{casedata["caseSubjet"]}' + '<*' * 45)
+        self.casedata = casedata
+        self.preHandleReq(self.casedata)
         send = sendrequests.SendRequests()
-        r = send.sendRequests(self.s, casedata)
+        self.r = send.sendRequests(self.s, self.casedata)
+        if self.r and self.r.isJson:
+            if self.r.json():
 
-        if r.json():
-            res =AssertUtils().assertJson(r, casedata['assertByresponse'])
-            self.assertTrue(res,True)
-        # r = requests.request(method=method, url=url, headers=headers, data=json.dumps(param))
-        # logging.info(json.dumps(param,sort_keys=True,ensure_ascii=False,indent=2))
-        # print('response',json.dumps(r.json(),sort_keys=True,indent=2,ensure_ascii=False))
-        # print('-------------------------------------------------------------------------------------------------------------------------------------')
-        # print('request',json.dumps(r.json(),sort_keys=True,indent=2,ensure_ascii=False))
-        #
-        # self.assertTrue(r.json()['msg'] == '成功')
+                res = AssertUtils().assertJson(self.r.json(), casedata['assertByresponse'])
+                self.assertTrue(res, True)
+
+    def preHandleReq(self, casedata):
+        bean.handle(casedata)
 
 
 if __name__ == '__main__':
@@ -73,7 +100,7 @@ if __name__ == '__main__':
     # fp = open(filename, 'wb')
     # runner = HTMLTestRunner(stream=fp, title='发布会系统接口自动化测试报告',
     #                         description='环境：windows 7 浏览器：chrome',
-    #                         tester='Jason')
+    #                         tester='wangzhiqing')
     # runner.run(suite)
     # fp.close()
     # report = new_report(setting.TEST_REPORT)  # 调用模块生成最新的报告

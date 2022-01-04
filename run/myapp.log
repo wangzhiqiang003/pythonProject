@@ -1,0 +1,1007 @@
+Fri, 31 Dec 2021 12:51:59 factory.py[line:18] DEBUG Not in REPL -> leaving logger event level as is.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.address`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.address` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.automotive`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.automotive`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.bank`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.barcode`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.barcode`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.color`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.color`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.company`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.company` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.credit_card`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.credit_card`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.currency`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.currency`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.date_time`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.date_time`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:113] DEBUG Provider `faker.providers.file` does not feature localization. Specified locale `zh_CN` is not utilized for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.geo`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.geo`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.internet`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.internet` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:113] DEBUG Provider `faker.providers.isbn` does not feature localization. Specified locale `zh_CN` is not utilized for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.job`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.job` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.lorem`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.lorem` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.misc`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:101] DEBUG Specified locale `zh_CN` is not available for provider `faker.providers.misc`. Locale reset to `en_US` for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.person`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.person` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.phone_number`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.phone_number` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:113] DEBUG Provider `faker.providers.profile` does not feature localization. Specified locale `zh_CN` is not utilized for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:113] DEBUG Provider `faker.providers.python` does not feature localization. Specified locale `zh_CN` is not utilized for this provider.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:94] DEBUG Looking for locale `zh_CN` in provider `faker.providers.ssn`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:106] DEBUG Provider `faker.providers.ssn` has been localized to `zh_CN`.
+Fri, 31 Dec 2021 12:51:59 factory.py[line:113] DEBUG Provider `faker.providers.user_agent` does not feature localization. Specified locale `zh_CN` is not utilized for this provider.
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*登录密钥获取<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:00 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/login/publicKey
+Fri, 31 Dec 2021 12:52:00 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:00 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/login/publicKey HTTP/1.1" 200 530
+Fri, 31 Dec 2021 12:52:00 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:00 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "runthink-sign": "6dc4e4b1799499c685082ac866a69cbd"
+}
+Fri, 31 Dec 2021 12:52:00 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:00 GMT', 'Content-Type': 'application/json', 'Content-Length': '530', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'Ccd74127O234143F', 'Location': None}
+Fri, 31 Dec 2021 12:52:00 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:45] INFO {
+  "srcCode": "yunlibao_100001"
+}
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "privateKey": "ee1bcf7fe3657265e329554dc89e64c7",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvNHxvYueHYICr-ogFyN5Zf03QEYabXMC_0tzqBA8ffJMFJ6Cut1M6htGcnAOtGAykZtZZEqfn9WYwYyADHrWA12TSUfvIAGfyyI8jTfN4D9tphgQ5yLqvGN2ngt9qbz3l5gPQvLGq5gE_7GI50esrW8UOp4mzHy2O_J-9nyhq-NO4sYmdVoQ13QedCcUASi7qwiuf2lZt3c_DxQxAS58gEFclyQP_xItMo6T_dRRo-1AXCZkOSjDiRcvvDi_HnNa9dInDyNqjRfSufrFUpviIyKffaKEsGsLs4nfiNmS68CTbusTUxd1Tl-rrecAlLtLtbiTUMvJJ5UYKRLytCdhwIDAQAB"
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:52] INFO traceId:Ccd74127O234143F
+Fri, 31 Dec 2021 12:52:00 caseAssemble.py[line:293] INFO 要存储的数据为privateKey：ee1bcf7fe3657265e329554dc89e64c7---['ee1bcf7fe3657265e329554dc89e64c7']
+Fri, 31 Dec 2021 12:52:00 caseAssemble.py[line:293] INFO 要存储的数据为publicKey：MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvNHxvYueHYICr-ogFyN5Zf03QEYabXMC_0tzqBA8ffJMFJ6Cut1M6htGcnAOtGAykZtZZEqfn9WYwYyADHrWA12TSUfvIAGfyyI8jTfN4D9tphgQ5yLqvGN2ngt9qbz3l5gPQvLGq5gE_7GI50esrW8UOp4mzHy2O_J-9nyhq-NO4sYmdVoQ13QedCcUASi7qwiuf2lZt3c_DxQxAS58gEFclyQP_xItMo6T_dRRo-1AXCZkOSjDiRcvvDi_HnNa9dInDyNqjRfSufrFUpviIyKffaKEsGsLs4nfiNmS68CTbusTUxd1Tl-rrecAlLtLtbiTUMvJJ5UYKRLytCdhwIDAQAB---['MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvNHxvYueHYICr-ogFyN5Zf03QEYabXMC_0tzqBA8ffJMFJ6Cut1M6htGcnAOtGAykZtZZEqfn9WYwYyADHrWA12TSUfvIAGfyyI8jTfN4D9tphgQ5yLqvGN2ngt9qbz3l5gPQvLGq5gE_7GI50esrW8UOp4mzHy2O_J-9nyhq-NO4sYmdVoQ13QedCcUASi7qwiuf2lZt3c_DxQxAS58gEFclyQP_xItMo6T_dRRo-1AXCZkOSjDiRcvvDi_HnNa9dInDyNqjRfSufrFUpviIyKffaKEsGsLs4nfiNmS68CTbusTUxd1Tl-rrecAlLtLtbiTUMvJJ5UYKRLytCdhwIDAQAB']
+Fri, 31 Dec 2021 12:52:00 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:00 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*流贷密码登录<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:00 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/login/verifyPassword
+Fri, 31 Dec 2021 12:52:00 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:01 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/login/verifyPassword HTTP/1.1" 200 112
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "runthink-sign": "5ab0bbaf4748379e5406db3c071281b8"
+}
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:01 GMT', 'Content-Type': 'application/json', 'Content-Length': '112', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '08UyX06h4Vf8TJkd', 'Location': None}
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:45] INFO {
+  "loginPassword": "UbVg0FxsE5KDe7BJgmdtJNX75xaGCXPKOupaotVXiGlWjb3sLAuWI8kqhtb8vsB3QZKeCGia4SsOMa4y6Uky8dpQ0jGsTfNmuJu75BLSa+FXNryEr28sTuDZxPg6OmB/Rkq5iOSFXAngzwHi7Kq0Q4sYcBEYFWAcKCMyhb5/Ee10bF3EJ00uwNKshzGjuyhA0B3710VnUP5WdR/3tHWAtkVymOGGKhOohfK8GtRWRBu+S6Zt3/CDLLzPcEY9g5snRRRF3cRcJVstyBcFAZ5M8upfe+OO7daiUTha+6wQh3f1n8C5VrDgkTPTqJj/TPXULkb/+ATlkdXKkZ632RJfGw==",
+  "phone": "18805444341",
+  "privateKey": "ee1bcf7fe3657265e329554dc89e64c7",
+  "srcCode": "yunlibao_100001"
+}
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": "bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:52] INFO traceId:08UyX06h4Vf8TJkd
+Fri, 31 Dec 2021 12:52:01 caseAssemble.py[line:293] INFO 要存储的数据为data：bf9788f4-c708-4aca-b67e-2c444ad25bbc---['bf9788f4-c708-4aca-b67e-2c444ad25bbc']
+Fri, 31 Dec 2021 12:52:01 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*进入产品<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:01 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:01 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE004', 'module': '产品', 'caseSubjet': '进入产品', 'isValide': 'Y', 'apiId': 'api_27', 'envId': 'env_005', 'params': '$.productNo="PRD00H51"', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/product/enterProduct
+Fri, 31 Dec 2021 12:52:01 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:01 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/product/enterProduct HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "257763d13ae1da3d356ab0345ae71d74"
+}
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:01 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'Ih2IXn2D2108r10R', 'Location': None}
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:45] INFO {
+  "productNo": "PRD00H51"
+}
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:52] INFO traceId:Ih2IXn2D2108r10R
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:01 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*绑定银行卡（正向）<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:01 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:01 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE005', 'module': '银行账户', 'caseSubjet': '绑定银行卡（正向）', 'isValide': 'Y', 'apiId': 'api_20', 'envId': 'env_005', 'params': '$.accountNo="${__get_bank_no()}",\n$.accountName="接口测试专用"', 'save_req_res': '$.req.accountNo,\n$.res.accountId = $.res.data', 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': '{\n  "data": [{ "DBName": "dev_runthink_api",\n    "sql": \'\'\' update bank_card_info\n set is_deleted=1\n where cust_id = %s;\'\'\',\n"param":["1468103327211479042"]\n},{ "DBName": "dev_runthink_api",\n    "sql": \'\'\' update bank_card_auth_apply\n set is_deleted=1\n where cust_id = %s;\'\'\',\n"param":["1468103327211479042"]\n}]\n}', 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:01 dbutils.py[line:104] ERROR {'DBName': 'dev_runthink_api', 'sql': ' update bank_card_info\n set is_deleted=1\n where cust_id = %s;', 'param': ['1468103327211479042']}
+Fri, 31 Dec 2021 12:52:01 dbutils.py[line:123] INFO paramllistsfsdf<class 'list'>
+Fri, 31 Dec 2021 12:52:01 dbutils.py[line:104] ERROR {'DBName': 'dev_runthink_api', 'sql': ' update bank_card_auth_apply\n set is_deleted=1\n where cust_id = %s;', 'param': ['1468103327211479042']}
+Fri, 31 Dec 2021 12:52:01 dbutils.py[line:123] INFO paramllistsfsdf<class 'list'>
+Fri, 31 Dec 2021 12:52:01 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/bindBankCard
+Fri, 31 Dec 2021 12:52:01 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:02 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/bindBankCard HTTP/1.1" 200 95
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "3ef60ae276b8796dcaca60fff1aee903"
+}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:02 GMT', 'Content-Type': 'application/json', 'Content-Length': '95', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'L55W1oL283W0PKPt', 'Location': None}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:45] INFO {
+  "accountName": "接口测试专用",
+  "accountNo": "6226766819570484",
+  "bankCnaps": {
+    "bankCity": "湖州市",
+    "bankCode": "ABC",
+    "bankName": "中国农业银行股份有限公司",
+    "bankProvence": "浙江省",
+    "cnapsCode": "103336212610",
+    "cnapsName": "中国农业银行长兴县和平支行"
+  },
+  "cnapsCode": "103336212610",
+  "sourceType": "0"
+}
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": "1476778147168079873",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:52] INFO traceId:L55W1oL283W0PKPt
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:293] INFO 要存储的数据为accountNo：6226766819570484---['6226766819570484']
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:293] INFO 要存储的数据为accountId：1476778147168079873---['1476778147168079873']
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*获取银行卡认证信息<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE006', 'module': '银行账户', 'caseSubjet': '获取银行卡认证信息', 'isValide': 'Y', 'apiId': 'api_23', 'envId': 'env_005', 'params': '$.cardId="${#accountId}",\n$.authType=1', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/authBankCard
+Fri, 31 Dec 2021 12:52:02 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:02 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/authBankCard HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "6ddfd91c0f18b3dad55f3977e19848a1"
+}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:02 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'TwYyGhooqHHHC89G', 'Location': None}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:45] INFO {
+  "authType": 1,
+  "cardId": "1476778147168079873"
+}
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:52] INFO traceId:TwYyGhooqHHHC89G
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*认证银行卡<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE007', 'module': '银行账户', 'caseSubjet': '认证银行卡', 'isValide': 'Y', 'apiId': 'api_22', 'envId': 'env_005', 'params': '$.cardId="${#accountId}"', 'save_req_res': '$.res.cardauth_applyId=$.res.applyId', 'fetch_data_from_db': {}, 'headers': {'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'get'}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/bankCardAuthInfo
+Fri, 31 Dec 2021 12:52:02 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:02 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "GET /api/api/bankCard/bankCardAuthInfo?cardId=1476778147168079873 HTTP/1.1" 200 290
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:78] INFO {
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc"
+}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:02 GMT', 'Content-Type': 'application/json', 'Content-Length': '290', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '9gBp98fdh5cEUQxP', 'Location': None}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:45] INFO {
+  "cardId": "1476778147168079873"
+}
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "accountName": null,
+    "accountNo": null,
+    "applyId": "1476778148145352705",
+    "authStatus": "1",
+    "authType": "1",
+    "cardId": "1476778147168079873",
+    "cnapsName": null,
+    "paymentAmount": null,
+    "paymentDeadline": null,
+    "positiveCheckCount": 3
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:52] INFO traceId:9gBp98fdh5cEUQxP
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:293] INFO 要存储的数据为cardauth_applyId：1476778148145352705---['1476778148145352705']
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:02 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*校验银行卡认证打款结果<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:02 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE008', 'module': '银行账户', 'caseSubjet': '校验银行卡认证打款结果', 'isValide': 'Y', 'apiId': 'api_24', 'envId': 'env_005', 'params': '$.applyId="${#cardauth_applyId}"', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:02 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/checkBankCardAuth
+Fri, 31 Dec 2021 12:52:02 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/checkBankCardAuth HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "5021cc241f2caffa7159706244e999e0"
+}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:02 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '17fF8IHu6v51w3Ie', 'Location': None}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:45] INFO {
+  "applyId": "1476778148145352705",
+  "authType": "1",
+  "paymentAmount": 0.11
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:52] INFO traceId:17fF8IHu6v51w3Ie
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*绑定银行卡(认证)<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE009', 'module': '银行账户', 'caseSubjet': '绑定银行卡(认证)', 'isValide': 'Y', 'apiId': 'api_20', 'envId': 'env_005', 'params': '$.accountNo="${__get_bank_no()}",\n$.accountName="接口测试专用"', 'save_req_res': '$.req.accountNo,\n$.res.accountId = $.res.data', 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/bindBankCard
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/bindBankCard HTTP/1.1" 200 95
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "6e391464f6b7598d38de885cd0058ec7"
+}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '95', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '37kQbU9P3ydgd8Q1', 'Location': None}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:45] INFO {
+  "accountName": "接口测试专用",
+  "accountNo": "6226761009104341",
+  "bankCnaps": {
+    "bankCity": "湖州市",
+    "bankCode": "ABC",
+    "bankName": "中国农业银行股份有限公司",
+    "bankProvence": "浙江省",
+    "cnapsCode": "103336212610",
+    "cnapsName": "中国农业银行长兴县和平支行"
+  },
+  "cnapsCode": "103336212610",
+  "sourceType": "0"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": "1476778151538544642",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:52] INFO traceId:37kQbU9P3ydgd8Q1
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:293] INFO 要存储的数据为accountNo：6226761009104341---['6226761009104341']
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:293] INFO 要存储的数据为accountId：1476778151538544642---['1476778151538544642']
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*认证银行卡<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE010', 'module': '银行账户', 'caseSubjet': '认证银行卡', 'isValide': 'Y', 'apiId': 'api_23', 'envId': 'env_005', 'params': '$.cardId="${#accountId}",\n$.authType=2', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/authBankCard
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/authBankCard HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "a4cbe53f229b41358481b6fa77e5f20c"
+}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'c1R6b3AUW7PGU9IC', 'Location': None}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:45] INFO {
+  "authType": 2,
+  "cardId": "1476778151538544642"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:52] INFO traceId:c1R6b3AUW7PGU9IC
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*获取银行卡认证信息<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE011', 'module': '银行账户', 'caseSubjet': '获取银行卡认证信息', 'isValide': 'Y', 'apiId': 'api_22', 'envId': 'env_005', 'params': '$.cardId="${#accountId}"', 'save_req_res': '$.res.cardauth_applyId=$.res.applyId', 'fetch_data_from_db': {}, 'headers': {'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'get'}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/bankCardAuthInfo
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "GET /api/api/bankCard/bankCardAuthInfo?cardId=1476778151538544642 HTTP/1.1" 200 310
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:78] INFO {
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc"
+}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '310', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'jtu7G8Oae85xe1y5', 'Location': None}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:45] INFO {
+  "cardId": "1476778151538544642"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "accountName": null,
+    "accountNo": null,
+    "applyId": "1476778152708755458",
+    "authStatus": "1",
+    "authType": "2",
+    "cardId": "1476778151538544642",
+    "cnapsName": null,
+    "paymentAmount": 0.88,
+    "paymentDeadline": "2022-01-07 12:52:03",
+    "positiveCheckCount": null
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:52] INFO traceId:jtu7G8Oae85xe1y5
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:293] INFO 要存储的数据为cardauth_applyId：1476778152708755458---['1476778152708755458']
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:03 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*校验银行卡认证（反向）<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:03 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE012', 'module': '银行账户', 'caseSubjet': '校验银行卡认证（反向）', 'isValide': 'Y', 'apiId': 'api_24', 'envId': 'env_005', 'params': '$.applyId="${#cardauth_applyId}",\n$.authType=2', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:03 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/checkBankCardAuth
+Fri, 31 Dec 2021 12:52:03 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:04 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/checkBankCardAuth HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "ea7a701e225d9ec1e7aa99668e1975ed"
+}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:04 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '6Oevk1fosIF92dgd', 'Location': None}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:45] INFO {
+  "applyId": "1476778152708755458",
+  "authType": 2,
+  "paymentAmount": 0.11
+}
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:52] INFO traceId:6Oevk1fosIF92dgd
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*设置默认银行卡<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE013', 'module': '银行账户', 'caseSubjet': '设置默认银行卡', 'isValide': 'Y', 'apiId': 'api_25', 'envId': 'env_005', 'params': '$.cardId="${#accountId}"', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/bankCard/switchDefaultBankCard
+Fri, 31 Dec 2021 12:52:04 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:04 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/bankCard/switchDefaultBankCard HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "2867539e48371d7d2441d183b2b158a7"
+}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:04 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '8O24Q4JB1C8L4O25', 'Location': None}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:45] INFO {
+  "applyId": "1468396649847177218",
+  "cardId": "1476778151538544642"
+}
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:52] INFO traceId:8O24Q4JB1C8L4O25
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*提现获取密钥<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/login/publicKey
+Fri, 31 Dec 2021 12:52:04 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:04 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/login/publicKey HTTP/1.1" 200 530
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "runthink-sign": "6dc4e4b1799499c685082ac866a69cbd"
+}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:04 GMT', 'Content-Type': 'application/json', 'Content-Length': '530', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'kw8jTQqsJ2S4KoKa', 'Location': None}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:45] INFO {
+  "srcCode": "yunlibao_100001"
+}
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "privateKey": "c9bcf4464d0c73598888550cf60e42dc",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjaY8svn4NFY4lTZB33vR0gK6UpDJ9ClHq78CTMWiQjVl72mJRCHy67YE5lpGfmosafea3k6PYC-QbzR0AFd7cX1aAbY2Lwkt-MXJMTg5v__o8ITa9cvqbtPsie6v-0JC_mtWt0DvtX6x6xZlUY2MWq6QuNssMde9U0zgsIel87_nFHBEPaNA5tCBZqEFYU15Ymg44cEeajbryPV390opAj5glUtsY2cq65A_kbpvan_TkYaXMGpMzY7b08CPU4K0BZNyB998YR9tnNLaWtIOwMd030QJuTQvcQFA9bRI-ttkM8cZ0v11S8sY9hwLkWxiw2EegH_J3cRLNO0ugmhJPQIDAQAB"
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:52] INFO traceId:kw8jTQqsJ2S4KoKa
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:293] INFO 要存储的数据为privateKey：c9bcf4464d0c73598888550cf60e42dc---['c9bcf4464d0c73598888550cf60e42dc']
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:293] INFO 要存储的数据为publicKey：MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjaY8svn4NFY4lTZB33vR0gK6UpDJ9ClHq78CTMWiQjVl72mJRCHy67YE5lpGfmosafea3k6PYC-QbzR0AFd7cX1aAbY2Lwkt-MXJMTg5v__o8ITa9cvqbtPsie6v-0JC_mtWt0DvtX6x6xZlUY2MWq6QuNssMde9U0zgsIel87_nFHBEPaNA5tCBZqEFYU15Ymg44cEeajbryPV390opAj5glUtsY2cq65A_kbpvan_TkYaXMGpMzY7b08CPU4K0BZNyB998YR9tnNLaWtIOwMd030QJuTQvcQFA9bRI-ttkM8cZ0v11S8sY9hwLkWxiw2EegH_J3cRLNO0ugmhJPQIDAQAB---['MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjaY8svn4NFY4lTZB33vR0gK6UpDJ9ClHq78CTMWiQjVl72mJRCHy67YE5lpGfmosafea3k6PYC-QbzR0AFd7cX1aAbY2Lwkt-MXJMTg5v__o8ITa9cvqbtPsie6v-0JC_mtWt0DvtX6x6xZlUY2MWq6QuNssMde9U0zgsIel87_nFHBEPaNA5tCBZqEFYU15Ymg44cEeajbryPV390opAj5glUtsY2cq65A_kbpvan_TkYaXMGpMzY7b08CPU4K0BZNyB998YR9tnNLaWtIOwMd030QJuTQvcQFA9bRI-ttkM8cZ0v11S8sY9hwLkWxiw2EegH_J3cRLNO0ugmhJPQIDAQAB']
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:04 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*提现成功<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:04 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE015', 'module': '提现', 'caseSubjet': '提现成功', 'isValide': 'Y', 'apiId': 'api_006', 'envId': 'env_005', 'params': '$.privateKey="${#privateKey}",\n$.txPassword="${__encript(111111)}",\n$.virtualAccountNo="9595000091240004",\n$.withdrawAmount=12000,\n$.withdrawCardId="${#cardId}"', 'save_req_res': '$.billingIds=$.res.data.flowNo,\n$.withdrawCardId=$.req.withdrawCardId', 'fetch_data_from_db': '{\n  "data": [{ "DBName": "dev_runthink_thirdparty",\n    "sql": \'\'\' select id as cardId\n from dev_runthink_api.bank_card_info\n where cust_id = %s\n   and is_deleted = 0\n   and authentication = 1 limit 1;\'\'\',\n"param":["1468103327211479042"]\n}]\n}', 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.data.withdrawStatus='2'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:04 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:04 dbutils.py[line:54] INFO {'cardId': '1476778147168079873'}
+Fri, 31 Dec 2021 12:52:04 dbutils.py[line:143] INFO 存入的值为{'cardId': '1476778147168079873'}
+Fri, 31 Dec 2021 12:52:04 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/wallet/withdrawApply
+Fri, 31 Dec 2021 12:52:04 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:07 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/wallet/withdrawApply HTTP/1.1" 200 127
+Fri, 31 Dec 2021 12:52:07 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:07 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "b36a8aa37549e0be590c542e46faef79"
+}
+Fri, 31 Dec 2021 12:52:07 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:07 GMT', 'Content-Type': 'application/json', 'Content-Length': '127', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'V78sMd7v5642X1gp', 'Location': None}
+Fri, 31 Dec 2021 12:52:07 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:07 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:07 testCaseSuite.py[line:45] INFO {
+  "privateKey": "c9bcf4464d0c73598888550cf60e42dc",
+  "tradeAbstract": "",
+  "txPassword": "eyBh1kRir0tceweqrzVXo4WmWDtj71lYauogI8ABy2I1/RJ6pCPiNZ71aLI2i1+mOWpeQc9cpI6G0CW08RJfRUFe4/K7YLpX8H9qeWTNE1MuT8OfHrDNVTFP48ufP9k44E4a+GOpKL6euBWEnUDrevNkRq+tZ9pBGmFS3I69lwlM4odb4zY559oC1OYxGLqFJ4mq4GvuU2MM3VBMxRvEajkVOXQY8Dq0WmNZ62eGUNyb26AT+i4UZPYSGAH9xt0ntnLAqyASvrsGx6TJDINDO9rvm53oV+2jCxW+lARzd3PRFMvqFsr8N+CSnHnJaQSQnc2NkQyY0MB+oEa4AWguNQ==",
+  "virtualAccountNo": "9595000091240004",
+  "withdrawAmount": 12000,
+  "withdrawCardId": "1476778147168079873"
+}
+Fri, 31 Dec 2021 12:52:07 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:07 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "flowNo": "1476778163689439233",
+    "withdrawStatus": "2"
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:07 testCaseSuite.py[line:52] INFO traceId:V78sMd7v5642X1gp
+Fri, 31 Dec 2021 12:52:07 caseAssemble.py[line:293] INFO 要存储的数据为billingIds：1476778163689439233---['1476778163689439233']
+Fri, 31 Dec 2021 12:52:07 caseAssemble.py[line:293] INFO 要存储的数据为withdrawCardId：1476778147168079873---['1476778147168079873']
+Fri, 31 Dec 2021 12:52:07 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:07 testCaseSuite.py[line:57] INFO 延迟时间为2
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*回单下载密钥获取<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:09 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/login/publicKey
+Fri, 31 Dec 2021 12:52:09 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:09 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/login/publicKey HTTP/1.1" 200 530
+Fri, 31 Dec 2021 12:52:09 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:09 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "runthink-sign": "6dc4e4b1799499c685082ac866a69cbd"
+}
+Fri, 31 Dec 2021 12:52:09 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '530', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '5u6u29R2sU7k5ThM', 'Location': None}
+Fri, 31 Dec 2021 12:52:09 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:45] INFO {
+  "srcCode": "yunlibao_100001"
+}
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "privateKey": "5d051a24aa973a342624c9726b2060e1",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqCE9uLeGf7e7Y-WXS0qFohpPsC1wvFRJO_1KgvUP7ZkK1vVh587e_2Q7Zqkpc5zGW2r6UESCHIchojXQDxnYswoupwZcEsfnV7R1hWMOQfsVsCmGOEKGhywxSQmWKTjYoUFoQc1Lg0Hm92uHxE0ZqBWLZBNx7ZKT2AFHzZ6kbSF32f4pQmE_hrxQvnoCGAmvQOMXF0LUF1PMaNcIvV9YpmMOFFuB4Jm7sEw8IVSjVdV-dIbTJH2cFiP79-rsbxtpOa5sPK-kVEah_o_UPjZn9-Z8up53BcAtOyedSfD--sTMH4NEHH9nB0PDLvQoxF5tpRCqJXoC5m9H_w8M7rN9HwIDAQAB"
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:52] INFO traceId:5u6u29R2sU7k5ThM
+Fri, 31 Dec 2021 12:52:09 caseAssemble.py[line:293] INFO 要存储的数据为privateKey：5d051a24aa973a342624c9726b2060e1---['5d051a24aa973a342624c9726b2060e1']
+Fri, 31 Dec 2021 12:52:09 caseAssemble.py[line:293] INFO 要存储的数据为publicKey：MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqCE9uLeGf7e7Y-WXS0qFohpPsC1wvFRJO_1KgvUP7ZkK1vVh587e_2Q7Zqkpc5zGW2r6UESCHIchojXQDxnYswoupwZcEsfnV7R1hWMOQfsVsCmGOEKGhywxSQmWKTjYoUFoQc1Lg0Hm92uHxE0ZqBWLZBNx7ZKT2AFHzZ6kbSF32f4pQmE_hrxQvnoCGAmvQOMXF0LUF1PMaNcIvV9YpmMOFFuB4Jm7sEw8IVSjVdV-dIbTJH2cFiP79-rsbxtpOa5sPK-kVEah_o_UPjZn9-Z8up53BcAtOyedSfD--sTMH4NEHH9nB0PDLvQoxF5tpRCqJXoC5m9H_w8M7rN9HwIDAQAB---['MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqCE9uLeGf7e7Y-WXS0qFohpPsC1wvFRJO_1KgvUP7ZkK1vVh587e_2Q7Zqkpc5zGW2r6UESCHIchojXQDxnYswoupwZcEsfnV7R1hWMOQfsVsCmGOEKGhywxSQmWKTjYoUFoQc1Lg0Hm92uHxE0ZqBWLZBNx7ZKT2AFHzZ6kbSF32f4pQmE_hrxQvnoCGAmvQOMXF0LUF1PMaNcIvV9YpmMOFFuB4Jm7sEw8IVSjVdV-dIbTJH2cFiP79-rsbxtpOa5sPK-kVEah_o_UPjZn9-Z8up53BcAtOyedSfD--sTMH4NEHH9nB0PDLvQoxF5tpRCqJXoC5m9H_w8M7rN9HwIDAQAB']
+Fri, 31 Dec 2021 12:52:09 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:09 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*回单下载成功<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:09 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:09 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE017', 'module': '回单下载', 'caseSubjet': '回单下载成功', 'isValide': 'Y', 'apiId': 'api_19', 'envId': 'env_005', 'params': '$.receiveEmail="wangzhiqiang@runthinkdtech.com",\n$.privateKey="${#privateKey}",\n$.txPassword="${__encript(111111)}",\n$.billingIds=["${#billingIds}"],\n$.virtualAccountNo="9595000091240004"', 'save_req_res': {}, 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': '{\n  "data": [{ "DBName": "dev_runthink_thirdparty",\n    "sql": \'\'\' update\n     msg_send_record\n set is_deleted=1\n where receiver = %s\n   and msg_type = 0\'\'\',\n"param":["wangzhiqiang@runthinkdtech.com"]\n}]\n}', 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:09 dbutils.py[line:104] ERROR {'DBName': 'dev_runthink_thirdparty', 'sql': ' update\n     msg_send_record\n set is_deleted=1\n where receiver = %s\n   and msg_type = 0', 'param': ['wangzhiqiang@runthinkdtech.com']}
+Fri, 31 Dec 2021 12:52:09 dbutils.py[line:123] INFO paramllistsfsdf<class 'list'>
+Fri, 31 Dec 2021 12:52:09 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/wallet/receiptEmail
+Fri, 31 Dec 2021 12:52:09 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:12 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/wallet/receiptEmail HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "b0fe243d9ead0c95df1a94bb7de11478"
+}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:12 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'r139x6UmS6eSG8oU', 'Location': None}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:45] INFO {
+  "billingIds": [
+    "1476778163689439233"
+  ],
+  "privateKey": "5d051a24aa973a342624c9726b2060e1",
+  "receiveEmail": "wangzhiqiang@runthinkdtech.com",
+  "txPassword": "dCa5YYteHV8jX9wuxVb2VDnoOwh7HzkDBkaIwh03KFqRALUvS3kyeCUAO+iagdyXCdIPiObWY4hELGdfIf7gXNo2fk03Mxqwf/oHkdX69SkDLLF+0Lt5JJpqCSZfL60tmIAHe2yDC/gsfHIQONt/4ARQQKZXAvQ0J85rE0TI5V69a5cEaIJpc6aNxFWlw2+0SBrUpr5seUgkvjy5jYBovxY8YhU5lIjQoFcF2OWzpAtTJ0gpC/Ojs9pvmIhsGzSlX2EsG1GibMuhkIXnZHJqSMOahOA/62foXRVmGF9UZEQjcfPTrQnLv+oLCTETc4h2YhuYLeGrpfYSGgCC9HOzqA==",
+  "virtualAccountNo": "9595000091240004"
+}
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:52] INFO traceId:r139x6UmS6eSG8oU
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*还款试算<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE018', 'module': '放款', 'caseSubjet': '还款试算', 'isValide': 'Y', 'apiId': 'api_26', 'envId': 'env_005', 'params': '$.receiveCardId="${#withdrawCardId}",\n$.loanAmount=1000', 'save_req_res': '$.trail=$.res.data', 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/loan/repaymentPlanTrial
+Fri, 31 Dec 2021 12:52:12 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:12 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/loan/repaymentPlanTrial HTTP/1.1" 200 1831
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "f2ed1ea23e1ee69949fb3364a92485ef"
+}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:12 GMT', 'Content-Type': 'application/json', 'Content-Length': '1831', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'gcx9isy33aRKHK03', 'Location': None}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:45] INFO {
+  "loanAmount": 1000,
+  "receiveCardId": "1476778147168079873",
+  "repayKind": "30"
+}
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "dailyRate": 0.02777778,
+    "fundDailyRate": null,
+    "fundYearRate": null,
+    "loanAmount": 1000,
+    "multipleTotalFeeAmt": 2.78,
+    "multipleTotalInterestAmount": 27.78,
+    "payOffFeeRate": null,
+    "receiveBankCard": {
+      "accountName": "接口测试专用",
+      "accountNo": "6226766819570484",
+      "authentication": true,
+      "bankCity": "湖州市",
+      "bankCode": "ABC",
+      "bankName": "中国农业银行股份有限公司",
+      "bankProvence": "浙江省",
+      "cardId": "1476778147168079873",
+      "cnapsCode": "103336212610",
+      "cnapsName": "中国农业银行长兴县和平支行",
+      "defaultCard": false,
+      "sourceType": "0"
+    },
+    "receiveMatchSumAmt": 1000.0,
+    "receiveSumAmt": 110000.0,
+    "repayBankQueryRpcVo": {
+      "acctName": "接口测试专用",
+      "acctNo": "9595000091240004",
+      "acctType": "2",
+      "bankCity": "",
+      "bankCode": "CMBC",
+      "bankName": "",
+      "bankProvence": "",
+      "cnapsCode": "305581003039",
+      "cnapsName": "中国民生银行股份有限公司广州环市支行",
+      "custNo": "1468104543345729538",
+      "idCard": "411527198302072669",
+      "phoneNo": "18805444341",
+      "supervisionCode": "6025"
+    },
+    "repayKind": "30",
+    "repayKindName": "一次性还本付息",
+    "repaymentPlanTrials": [
+      {
+        "amount": 1000.0,
+        "availableAmount": 1000.0,
+        "beginInterestDate": "2022-03-05",
+        "cashDate": "2022-06-10",
+        "contractName": "",
+        "contractNo": "",
+        "contractSignDate": null,
+        "dueDate": "2022-06-13",
+        "invoiceNo": "",
+        "loanAmount": 0.0,
+        "loanCycle": 100,
+        "loanCycleUnit": "1",
+        "payerName": "接口测试专用支付企业",
+        "receiveName": "接口测试专用",
+        "repaymentPlanDetailList": [
+          {
+            "beginInterestDate": "2022-03-05 00:00:00",
+            "feeAmt": 2.78,
+            "interestAmount": 27.78,
+            "period": 1,
+            "principalAmount": 1000.0,
+            "statementDate": "2022-06-13 00:00:00",
+            "totalAmount": 1027.78
+          }
+        ],
+        "sequenceNo": "ineterfaceId0012z22",
+        "status": false,
+        "totalAmount": 1027.78,
+        "totalFeeAmt": 2.78,
+        "totalInterestAmount": 27.78,
+        "totalPrincipalAmount": 1000.0
+      }
+    ],
+    "yearRate": 10.0
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:52] INFO traceId:gcx9isy33aRKHK03
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:293] INFO 要存储的数据为trail：{'receiveSumAmt': 110000.0, 'receiveMatchSumAmt': 1000.0, 'repayKind': '30', 'repayKindName': '一次性还本付息', 'yearRate': 10.0, 'dailyRate': 0.02777778, 'fundYearRate': None, 'fundDailyRate': None, 'payOffFeeRate': None, 'loanAmount': 1000, 'multipleTotalInterestAmount': 27.78, 'multipleTotalFeeAmt': 2.78, 'repaymentPlanTrials': [{'sequenceNo': 'ineterfaceId0012z22', 'contractSignDate': None, 'contractName': '', 'contractNo': '', 'invoiceNo': '', 'dueDate': '2022-06-13', 'beginInterestDate': '2022-03-05', 'loanCycleUnit': '1', 'loanCycle': 100, 'totalAmount': 1027.78, 'totalPrincipalAmount': 1000.0, 'totalInterestAmount': 27.78, 'totalFeeAmt': 2.78, 'payerName': '接口测试专用支付企业', 'receiveName': '接口测试专用', 'cashDate': '2022-06-10', 'amount': 1000.0, 'availableAmount': 1000.0, 'loanAmount': 0.0, 'status': False, 'repaymentPlanDetailList': [{'period': 1, 'statementDate': '2022-06-13 00:00:00', 'totalAmount': 1027.78, 'principalAmount': 1000.0, 'interestAmount': 27.78, 'feeAmt': 2.78, 'beginInterestDate': '2022-03-05 00:00:00'}]}], 'receiveBankCard': {'cardId': '1476778147168079873', 'sourceType': '0', 'bankName': '中国农业银行股份有限公司', 'bankCode': 'ABC', 'accountNo': '6226766819570484', 'accountName': '接口测试专用', 'bankProvence': '浙江省', 'bankCity': '湖州市', 'cnapsName': '中国农业银行长兴县和平支行', 'cnapsCode': '103336212610', 'authentication': True, 'defaultCard': False}, 'repayBankQueryRpcVo': {'custNo': '1468104543345729538', 'acctType': '2', 'acctNo': '9595000091240004', 'acctName': '接口测试专用', 'idCard': '411527198302072669', 'phoneNo': '18805444341', 'bankCode': 'CMBC', 'bankName': '', 'supervisionCode': '6025', 'bankProvence': '', 'bankCity': '', 'cnapsName': '中国民生银行股份有限公司广州环市支行', 'cnapsCode': '305581003039'}}---[{'receiveSumAmt': 110000.0, 'receiveMatchSumAmt': 1000.0, 'repayKind': '30', 'repayKindName': '一次性还本付息', 'yearRate': 10.0, 'dailyRate': 0.02777778, 'fundYearRate': None, 'fundDailyRate': None, 'payOffFeeRate': None, 'loanAmount': 1000, 'multipleTotalInterestAmount': 27.78, 'multipleTotalFeeAmt': 2.78, 'repaymentPlanTrials': [{'sequenceNo': 'ineterfaceId0012z22', 'contractSignDate': None, 'contractName': '', 'contractNo': '', 'invoiceNo': '', 'dueDate': '2022-06-13', 'beginInterestDate': '2022-03-05', 'loanCycleUnit': '1', 'loanCycle': 100, 'totalAmount': 1027.78, 'totalPrincipalAmount': 1000.0, 'totalInterestAmount': 27.78, 'totalFeeAmt': 2.78, 'payerName': '接口测试专用支付企业', 'receiveName': '接口测试专用', 'cashDate': '2022-06-10', 'amount': 1000.0, 'availableAmount': 1000.0, 'loanAmount': 0.0, 'status': False, 'repaymentPlanDetailList': [{'period': 1, 'statementDate': '2022-06-13 00:00:00', 'totalAmount': 1027.78, 'principalAmount': 1000.0, 'interestAmount': 27.78, 'feeAmt': 2.78, 'beginInterestDate': '2022-03-05 00:00:00'}]}], 'receiveBankCard': {'cardId': '1476778147168079873', 'sourceType': '0', 'bankName': '中国农业银行股份有限公司', 'bankCode': 'ABC', 'accountNo': '6226766819570484', 'accountName': '接口测试专用', 'bankProvence': '浙江省', 'bankCity': '湖州市', 'cnapsName': '中国农业银行长兴县和平支行', 'cnapsCode': '103336212610', 'authentication': True, 'defaultCard': False}, 'repayBankQueryRpcVo': {'custNo': '1468104543345729538', 'acctType': '2', 'acctNo': '9595000091240004', 'acctName': '接口测试专用', 'idCard': '411527198302072669', 'phoneNo': '18805444341', 'bankCode': 'CMBC', 'bankName': '', 'supervisionCode': '6025', 'bankProvence': '', 'bankCity': '', 'cnapsName': '中国民生银行股份有限公司广州环市支行', 'cnapsCode': '305581003039'}}]
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*放款获取密钥<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/login/publicKey
+Fri, 31 Dec 2021 12:52:12 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:12 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/login/publicKey HTTP/1.1" 200 530
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "runthink-sign": "6dc4e4b1799499c685082ac866a69cbd"
+}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:12 GMT', 'Content-Type': 'application/json', 'Content-Length': '530', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'CLar9ET2It5AI3N2', 'Location': None}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:45] INFO {
+  "srcCode": "yunlibao_100001"
+}
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": {
+    "privateKey": "4eb69d333edaf551d1775e88084e4eae",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmGzXU6uM-qStL-ih-rDQFagjkGdBfUt60q6kNS0iihNhEUeEx4UkdcPz2FRxFMT5xp3HUxFNluuJpQQ-fnWS8AErSnV27NZV5iYX7kZEcsZnwhTGdeZ-Dmron3-cy74NQgj2vFlf9cP7qjTMJ7Xd7jNuApos8yK1mkfR3ncgEzY-V8ruhElooSJe2c47E_2etAUtjgej11epVaFjss3oXarJ6cp3i8xjNPtiAmky0M0JMw84jsxzgZ6dqytILOjjzryaMJ3vYAjSOpcRs7QbqkB9I7hghajvkWzVk0FAXDJMI9yI3jnbPb0e_a_cm-v6Wyop_4G-QSKZSfx3BJeayQIDAQAB"
+  },
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:52] INFO traceId:CLar9ET2It5AI3N2
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:293] INFO 要存储的数据为privateKey：4eb69d333edaf551d1775e88084e4eae---['4eb69d333edaf551d1775e88084e4eae']
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:293] INFO 要存储的数据为publicKey：MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmGzXU6uM-qStL-ih-rDQFagjkGdBfUt60q6kNS0iihNhEUeEx4UkdcPz2FRxFMT5xp3HUxFNluuJpQQ-fnWS8AErSnV27NZV5iYX7kZEcsZnwhTGdeZ-Dmron3-cy74NQgj2vFlf9cP7qjTMJ7Xd7jNuApos8yK1mkfR3ncgEzY-V8ruhElooSJe2c47E_2etAUtjgej11epVaFjss3oXarJ6cp3i8xjNPtiAmky0M0JMw84jsxzgZ6dqytILOjjzryaMJ3vYAjSOpcRs7QbqkB9I7hghajvkWzVk0FAXDJMI9yI3jnbPb0e_a_cm-v6Wyop_4G-QSKZSfx3BJeayQIDAQAB---['MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmGzXU6uM-qStL-ih-rDQFagjkGdBfUt60q6kNS0iihNhEUeEx4UkdcPz2FRxFMT5xp3HUxFNluuJpQQ-fnWS8AErSnV27NZV5iYX7kZEcsZnwhTGdeZ-Dmron3-cy74NQgj2vFlf9cP7qjTMJ7Xd7jNuApos8yK1mkfR3ncgEzY-V8ruhElooSJe2c47E_2etAUtjgej11epVaFjss3oXarJ6cp3i8xjNPtiAmky0M0JMw84jsxzgZ6dqytILOjjzryaMJ3vYAjSOpcRs7QbqkB9I7hghajvkWzVk0FAXDJMI9yI3jnbPb0e_a_cm-v6Wyop_4G-QSKZSfx3BJeayQIDAQAB']
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:12 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*放款提交<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:99] INFO 当前替换的字段为{#data}
+Fri, 31 Dec 2021 12:52:12 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE018', 'module': '放款', 'caseSubjet': '放款提交', 'isValide': 'Y', 'apiId': 'api_28', 'envId': 'env_005', 'params': '$.receiveCardId="${#withdrawCardId}",\n$.privateKey="${#privateKey}",\n$.txPassword="${__encript(111111)}",\n$.multipleRepaymentPlanTrial=${#trail}', 'save_req_res': '$.res.data.loanApplyId', 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': 'bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.data.loanApplyStatus='1'", 'assertBySql': {}, 'allow_redirects': {}, 'method': 'post'}
+Fri, 31 Dec 2021 12:52:12 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/api/loan/commitLoanApply
+Fri, 31 Dec 2021 12:52:12 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/api/loan/commitLoanApply HTTP/1.1" 200 99
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json;charset=UTF-8",
+  "Authorization": "bearer bf9788f4-c708-4aca-b67e-2c444ad25bbc",
+  "runthink-sign": "282111a8b3726d795bb245cfde377616"
+}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '99', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '4AqC7ovS67Jg9COA', 'Location': None}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:45] INFO {
+  "loanAmount": 1000,
+  "multipleRepaymentPlanTrial": {
+    "dailyRate": 0.02777778,
+    "fundDailyRate": null,
+    "fundYearRate": null,
+    "loanAmount": 1000,
+    "multipleTotalFeeAmt": 2.78,
+    "multipleTotalInterestAmount": 27.78,
+    "payOffFeeRate": null,
+    "receiveBankCard": {
+      "accountName": "接口测试专用",
+      "accountNo": "6226766819570484",
+      "authentication": true,
+      "bankCity": "湖州市",
+      "bankCode": "ABC",
+      "bankName": "中国农业银行股份有限公司",
+      "bankProvence": "浙江省",
+      "cardId": "1476778147168079873",
+      "cnapsCode": "103336212610",
+      "cnapsName": "中国农业银行长兴县和平支行",
+      "defaultCard": false,
+      "sourceType": "0"
+    },
+    "receiveMatchSumAmt": 1000.0,
+    "receiveSumAmt": 110000.0,
+    "repayBankQueryRpcVo": {
+      "acctName": "接口测试专用",
+      "acctNo": "9595000091240004",
+      "acctType": "2",
+      "bankCity": "",
+      "bankCode": "CMBC",
+      "bankName": "",
+      "bankProvence": "",
+      "cnapsCode": "305581003039",
+      "cnapsName": "中国民生银行股份有限公司广州环市支行",
+      "custNo": "1468104543345729538",
+      "idCard": "411527198302072669",
+      "phoneNo": "18805444341",
+      "supervisionCode": "6025"
+    },
+    "repayKind": "30",
+    "repayKindName": "一次性还本付息",
+    "repaymentPlanTrials": [
+      {
+        "amount": 1000.0,
+        "availableAmount": 1000.0,
+        "beginInterestDate": "2022-03-05",
+        "cashDate": "2022-06-10",
+        "contractName": "",
+        "contractNo": "",
+        "contractSignDate": null,
+        "dueDate": "2022-06-13",
+        "invoiceNo": "",
+        "loanAmount": 0.0,
+        "loanCycle": 100,
+        "loanCycleUnit": "1",
+        "payerName": "接口测试专用支付企业",
+        "receiveName": "接口测试专用",
+        "repaymentPlanDetailList": [
+          {
+            "beginInterestDate": "2022-03-05 00:00:00",
+            "feeAmt": 2.78,
+            "interestAmount": 27.78,
+            "period": 1,
+            "principalAmount": 1000.0,
+            "statementDate": "2022-06-13 00:00:00",
+            "totalAmount": 1027.78
+          }
+        ],
+        "sequenceNo": "ineterfaceId0012z22",
+        "status": false,
+        "totalAmount": 1027.78,
+        "totalFeeAmt": 2.78,
+        "totalInterestAmount": 27.78,
+        "totalPrincipalAmount": 1000.0
+      }
+    ],
+    "yearRate": 10.0
+  },
+  "privateKey": "4eb69d333edaf551d1775e88084e4eae",
+  "receiveCardId": "1476778147168079873",
+  "repayKind": "30",
+  "txPassword": "OZye2ZUVADDD2bxfY3o7LP7OR8iMnYCq/QMAX0Ok2X4rTspu2m6zz8gWZkkZDCNyFQNO3nN8JrrZDI/c4rniHC7z6ioMmQpIj3BZwqMH91C5jt5KK5Xf0IfrBHnEUWUlgUjs8IAzex9H3RRI3rhVf45uzbw2Kw79l9EaT8D+ggoJdo/e56gflNC3xXBTbqE9YgiLhfhpT2rF+y0fYC7F83/CundwunFefwf1BHGMNcfOt9IRuBv0TSaki0W0DetAHinUWu/pUnRzYiS8uLcvA/oh3XNnzAdfJC2aSFdr5Pt+iB0gxyrG5JiD7qjVNj5XIcZxONiKz0xK47y+DUnAIQ==",
+  "verifyCode": "111111"
+}
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:49] INFO {
+  "code": "1140120611",
+  "data": null,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "存在在途借据"
+}
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:52] INFO traceId:4AqC7ovS67Jg9COA
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*审批系统获取登录set_cookie<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:63] INFO url is: http://apikey-dev.runthinkenv.com/key/oauth/authorize?response_type=token&client_id=49a3c1df700dacfa39a4f5e0316e8ac4&redirect_uri=http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): apikey-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:452] DEBUG http://apikey-dev.runthinkenv.com:80 "GET /key/oauth/authorize?response_type=token&client_id=49a3c1df700dacfa39a4f5e0316e8ac4&redirect_uri=http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard HTTP/1.1" 302 0
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:452] DEBUG http://apikey-dev.runthinkenv.com:80 "GET /key/login HTTP/1.1" 200 None
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:78] INFO {}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:13 GMT', 'Content-Type': 'text/html;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '23Acr15ydLN2mx6X', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Language': 'en-US', 'Content-Encoding': 'gzip', 'Location': None, 'Cookie': 'SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl'}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:84] INFO <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>登录</title>
+    <link rel="stylesheet" href="https://static-dev-1301461107.cos.ap-chengdu.myqcloud.com/runthink-service-key/statics/css/login.css"/>
+    <script src="https://static-dev-1301461107.cos.ap-chengdu.myqcloud.com/runthink-service-key/statics/js/login.js"></script>
+</head>
+<body>
+<div class="bigBox">
+    <div class="rightBox">
+        <form name="form" th:action="@{/login}" method="post" class="loginBox">
+            <div class="loginWord">登录</div>
+            <label>
+                <input type="text" name="username" required class="userInput" placeholder="请输入用户名"/>
+            </label>
+            <div class="passwordBox">
+                <label for="password">
+                    <input type="password" name="password" required class="passwordInput" placeholder="请输入密码"/>
+                </label>
+                <a class="close" id="showEye" onclick="switchPw()"></a>
+            </div>
+            <div class="forgetWord">
+                <a href="javascript:;" class="forgetA">忘记密码</a>
+            </div>
+            <button type="submit" class="loginBtn">登录</button>
+            <p style="color: #FF0000"></p>
+        </form>
+        <div class="tip">
+          <span class="tipSpan">
+            新希望供应链金融（广东）有限公司<br/>
+            粤ICP备2020115972
+          </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:85] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:13 GMT', 'Content-Type': 'text/html;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': '23Acr15ydLN2mx6X', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Language': 'en-US', 'Content-Encoding': 'gzip', 'Location': None, 'Cookie': 'SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl'}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:88] INFO traceId:23Acr15ydLN2mx6X
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:45] INFO {}
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:49] INFO "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"UTF-8\"/>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n    <title>登录</title>\n    <link rel=\"stylesheet\" href=\"https://static-dev-1301461107.cos.ap-chengdu.myqcloud.com/runthink-service-key/statics/css/login.css\"/>\n    <script src=\"https://static-dev-1301461107.cos.ap-chengdu.myqcloud.com/runthink-service-key/statics/js/login.js\"></script>\n</head>\n<body>\n<div class=\"bigBox\">\n    <div class=\"rightBox\">\n        <form name=\"form\" th:action=\"@{/login}\" method=\"post\" class=\"loginBox\">\n            <div class=\"loginWord\">登录</div>\n            <label>\n                <input type=\"text\" name=\"username\" required class=\"userInput\" placeholder=\"请输入用户名\"/>\n            </label>\n            <div class=\"passwordBox\">\n                <label for=\"password\">\n                    <input type=\"password\" name=\"password\" required class=\"passwordInput\" placeholder=\"请输入密码\"/>\n                </label>\n                <a class=\"close\" id=\"showEye\" onclick=\"switchPw()\"></a>\n            </div>\n            <div class=\"forgetWord\">\n                <a href=\"javascript:;\" class=\"forgetA\">忘记密码</a>\n            </div>\n            <button type=\"submit\" class=\"loginBtn\">登录</button>\n            <p style=\"color: #FF0000\"></p>\n        </form>\n        <div class=\"tip\">\n          <span class=\"tipSpan\">\n            新希望供应链金融（广东）有限公司<br/>\n            粤ICP备2020115972\n          </span>\n        </div>\n    </div>\n</div>\n</body>\n</html>\n"
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:52] INFO traceId:23Acr15ydLN2mx6X
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:288] INFO ['SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl']
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:293] INFO 要存储的数据为riskcookie：SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl---['SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl']
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*审批系统token获取<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:99] INFO 当前替换的字段为{#riskcookie}
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE020', 'module': 'risk登录', 'caseSubjet': '审批系统token获取', 'isValide': 'Y', 'apiId': 'api_31', 'envId': 'env_007', 'params': {}, 'save_req_res': '$.risktoken=$.header.Authorization', 'fetch_data_from_db': {}, 'headers': {'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': 'SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': {}, 'assertBySql': {}, 'allow_redirects': 'N', 'method': 'post'}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:63] INFO url is: http://apikey-dev.runthinkenv.com/key/login
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): apikey-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:452] DEBUG http://apikey-dev.runthinkenv.com:80 "POST /key/login?username=wangzq1&password=123456 HTTP/1.1" 302 0
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:69] INFO http://apikey-dev.runthinkenv.com/key/oauth/authorize?response_type=token&client_id=49a3c1df700dacfa39a4f5e0316e8ac4&redirect_uri=http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "Cookie": "SESSION=NzVmNjkxZTQtM2QxYy00N2U3LTllNjktZDc0NzU3MjVmNjBl"
+}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:13 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'B2O9W247MLH7l3Sa', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Set-Cookie': 'SESSION=N2E3Yjk3MzEtZTk0Mi00MjRiLWE3ZDYtMTBlNDZkMGQ1MWUx; Path=/key/; HttpOnly; SameSite=Lax', 'Location': 'http://apikey-dev.runthinkenv.com/key/oauth/authorize?response_type=token&client_id=49a3c1df700dacfa39a4f5e0316e8ac4&redirect_uri=http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard', 'Cookie': 'SESSION=N2E3Yjk3MzEtZTk0Mi00MjRiLWE3ZDYtMTBlNDZkMGQ1MWUx', 'Content-Type': 'text/html;charset=UTF-8'}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:84] INFO 
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:85] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:13 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'B2O9W247MLH7l3Sa', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Set-Cookie': 'SESSION=N2E3Yjk3MzEtZTk0Mi00MjRiLWE3ZDYtMTBlNDZkMGQ1MWUx; Path=/key/; HttpOnly; SameSite=Lax', 'Location': 'http://apikey-dev.runthinkenv.com/key/oauth/authorize?response_type=token&client_id=49a3c1df700dacfa39a4f5e0316e8ac4&redirect_uri=http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard', 'Cookie': 'SESSION=N2E3Yjk3MzEtZTk0Mi00MjRiLWE3ZDYtMTBlNDZkMGQ1MWUx', 'Content-Type': 'text/html;charset=UTF-8'}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:88] INFO traceId:B2O9W247MLH7l3Sa
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:452] DEBUG http://apikey-dev.runthinkenv.com:80 "POST /key/oauth/authorize?response_type=token&client_id=49a3c1df700dacfa39a4f5e0316e8ac4&redirect_uri=http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard&username=wangzq1&password=123456 HTTP/1.1" 302 0
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:111] INFO http://riskapproval-dev.runthinkenv.com/redirect?target_url=http://riskapproval-dev.runthinkenv.com/dashboard#access_token=a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1&token_type=bearer&expires_in=999&scope=all
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:122] INFO 响应参数为
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:45] INFO {
+  "password": "123456",
+  "username": "wangzq1"
+}
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:288] INFO ['bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1']
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:293] INFO 要存储的数据为risktoken：bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1---['bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1']
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:305] INFO 中间变量保存成功
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:13 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*审批系统查询提款审批任务<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:99] INFO 当前替换的字段为{#risktoken}
+Fri, 31 Dec 2021 12:52:13 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE021', 'module': 'risk登录', 'caseSubjet': '审批系统查询提款审批任务', 'isValide': 'Y', 'apiId': 'api_32', 'envId': 'env_005', 'params': '$.taskId="${#taskId}"', 'save_req_res': {}, 'fetch_data_from_db': '{\n  "data": [{ "DBName": "dev_runthink_thirdparty",\n    "sql": \'\'\' select  t2.id as taskId from  dev_runthink_api.loan_apply_order  t join dev_runthink_risk_approval.task_info t2 on t2.order_no =t.loan_order_no where loan_apply_id=%s\n\'\'\',\n"param":["${#loanApplyId}"]\n}]\n}', 'headers': {'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': 'M2VlNzc4YTUtZTRkMi00ODNlLWI5YmItZmJjOWZiMzVkMTRl', 'Authorization': 'bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': 'N', 'method': 'get'}
+Fri, 31 Dec 2021 12:52:13 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:13 dbutils.py[line:54] INFO {'taskId': '1476749221150564353'}
+Fri, 31 Dec 2021 12:52:13 dbutils.py[line:143] INFO 存入的值为{'taskId': '1476749221150564353'}
+Fri, 31 Dec 2021 12:52:13 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/riskApproval/task/approval/receive
+Fri, 31 Dec 2021 12:52:13 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:14 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "GET /api/riskApproval/task/approval/receive?taskId=1476749221150564353 HTTP/1.1" 200 78
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "Cookie": "M2VlNzc4YTUtZTRkMi00ODNlLWI5YmItZmJjOWZiMzVkMTRl",
+  "Authorization": "bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1"
+}
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'xw2VqVJFN14t07jj', 'Location': None}
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:45] INFO {
+  "taskId": "1476749221150564353"
+}
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:49] INFO {
+  "code": "0",
+  "data": true,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "成功"
+}
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:52] INFO traceId:xw2VqVJFN14t07jj
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:71] INFO >*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*>*审批系统查询提款审批任务1<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*<*
+Fri, 31 Dec 2021 12:52:14 caseAssemble.py[line:99] INFO 当前替换的字段为{#risktoken}
+Fri, 31 Dec 2021 12:52:14 caseAssemble.py[line:131] INFO items{'caseId': 'LD_CASE022', 'module': 'risk提款提交', 'caseSubjet': '审批系统查询提款审批任务1', 'isValide': 'Y', 'apiId': 'api_34', 'envId': 'env_005', 'params': '$.approvalDesc="${#approvalDesc}",\n$.approvalFinanceAmount="${#approvalFinanceAmount}",\n$.approvalFinancePeriod="${#approvalFinancePeriod}",\n$.approvalFinanceRepayType="${#approvalFinanceRepayType}",\n$.creditRate=0,\n$.enterpriseBusinessLicense.compId="${#enterprise_legal_id_card_compId}",\n$.enterpriseBusinessLicense.companyName="${#companyName}",\n$.enterpriseBusinessLicense.establishDate="${#establishDate}",\n$.enterpriseBusinessLicense.id="${#enterprise_business_license_id}",\n$.enterpriseBusinessLicense.regCapital="${#regCapital}",\n$.enterpriseBusinessLicense.socialCode="${#socialCode}",\n$.enterpriseBusinessLicense.taskId="${#taskId}",\n$.enterpriseLegalIdCard.compId="${#enterprise_legal_id_card_compId}",\n$.enterpriseLegalIdCard.id="${#enterprise_legal_id_card_id}",\n$.enterpriseLegalIdCard.idCard="${#idCard}",\n$.enterpriseLegalIdCard.issuedBy="${#issuedBy}"\n', 'save_req_res': {}, 'fetch_data_from_db': '{\n  "data": [{ "DBName": "dev_runthink_api",\n    "sql": \'\'\' select  t2.request as request from  dev_runthink_api.loan_apply_order  t join dev_runthink_risk_approval.task_submit_record t2 on t2.order_no =t.loan_order_no where loan_apply_id=%s\n\'\'\',\n"param":["${#loanApplyId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\' select comp_Id as enterprise_business_license_compId, company_Name as companyName, establish_Date as establishDate, id as enterprise_business_license_id,\n       reg_capital as regCapital,social_code as socialCode\nfrom dev_runthink_risk_approval.enterprise_business_license\nwhere task_id  = %s;\n\'\'\',\n"param":["${#taskId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\' select comp_id   as enterprise_legal_id_card_compId,\n       id        as enterprise_legal_id_card_id,\n       id_card   as idCard,\n       issued_by as issuedBy,\n       name      as legalname,\n       \'中国\' as nation,\n       \'男\' as sex\n\nfrom dev_runthink_risk_approval.enterprise_legal_id_card\nwhere task_id = %s;\n\'\'\',\n"param":["${#taskId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\'select comp_id                as operator_info_compId,\n       id                     as operator_info_id,\n       operator_contract_info as operatorContractInfo,\n       operator_id_card       as operatorIdCard,\n       operator_name          as operatorName\n\n\nfrom dev_runthink_risk_approval.operator_info\nwhere task_id = %s;\n\'\'\',\n"param":["${#taskId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\'\nselect\nid as receive_accounts_collect_id,\n       comp_id as receive_accounts_collect_compId,\n       match_amount as matchAmount,\n       total_amount as totalAmount\nfrom receive_accounts_collect\nwhere task_id = %s;\n\'\'\',\n"param":["${#taskId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\'\nselect\ncomp_id as receive_accounts_detail_compId,\n       amount ,\n       available_amount as availableAmount,\n       cash_date as cashDate,\n       0 as groupIndex,\n       loan_amount as loanAmount,\n       payer_name as payerName,\n       receive_name as receiveName,\n        sequence_no as sequenceNo,\n       status\nfrom  receive_accounts_detail\nwhere task_id = %s;\n\'\'\',\n"param":["${#taskId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\'\n\nselect comp_attribute_id as compAttributeId,\n       comp_id as task_file_compId,\n       file_id as fileId,\n       file_type as fileType,\n       id as task_file_id,\n       uri\nfrom dev_runthink_risk_approval.task_file\nwhere  task_id = %s;\n\'\'\',\n"param":["${#taskId}"]\n},{ "DBName": "dev_runthink_risk_approval",\n    "sql": \'\'\'\nselect  \'接口自动化提款审批数据勿动\' as approvalDesc,\n       finance_amount as approvalFinanceAmount,\n       finance_period as approvalFinancePeriod,\n       finance_repay_type as approvalFinanceRepayType\n\nfrom task_detail where task_id = %s;\n\'\'\',\n"param":["${#taskId}"]\n}]\n}', 'headers': {'Content-Type': 'application/json', 'Authorization': 'bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1'}, 'preReadyData': {}, 'response': {}, 'assertByresponse': "$.msg='成功'", 'assertBySql': {}, 'allow_redirects': 'N', 'method': 'post'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'request': '{"orderNo":"202112311057018921476749205371572228","systemCode":"LOAN_H5","businessType":0,"productType":"PRD00H51","channelType":"XSH001","taskType":1,"customerType":1,"fundName":"慧新小贷","name":"接口测试专用","mobile":"18805444341","idNo":"632323197407098700","financeAmount":1000.00,"financePeriod":"100","financeRepayType":"30","legalName":"尉迟行","linkName":"吕宜","establishDate":"2018-12-01","regCapital":5000000.00,"createRemarks":null,"source":"runthink-service-api","taskFile":[{"id":null,"taskId":null,"compId":"11","compAttributeId":"86","fileId":"1473838636465356802","fileName":"微信图片_20210908140819.jpg","flowNote":null,"fileType":"","uri":"7047a383-9a91-4fed-9e2c-c37e7f5ace8f"},{"id":null,"taskId":null,"compId":"11","compAttributeId":"86","fileId":"1473838622729011201","fileName":"微信图片_20210908140806.jpg","flowNote":null,"fileType":"","uri":"735ac8a4-7e45-4515-a4ed-87303782e382"},{"id":null,"taskId":null,"compId":"7","compAttributeId":"47","fileId":"1473838714001260545","fileName":"微信截图_20210830110539.png","flowNote":null,"fileType":"","uri":"bded548e-88c5-4c2b-b6b3-11db3b5ceadc"}],"enterpriseBusinessLicense":{"id":null,"taskId":null,"compId":"7","companyName":"接口测试专用","socialCode":"632323197407098700","legalName":"尉迟行","regCapital":"5000000.00","establishDate":"2018-12-01","residence":"上海市虹口区飞虹路360弄9号3637P室","companyType":null,"registrar":null,"businessScope":null,"businessTermStart":null,"businessTermEnd":null,"provence":null,"city":null,"industryType":null,"organizationType":null,"contactAddr":null,"tradeType":null,"tradeScope":null,"carrierCode":null,"contactEmail":null},"enterpriseShareholderInfo":null,"enterpriseManagerList":null,"enterpriseBeneficiaryInfo":null,"enterpriseShareholderBusinessLicense":null,"enterpriseShareholderIdCard":null,"enterpriseLegalIdCard":{"id":null,"taskId":null,"compId":"11","name":"尉迟行","idCard":"45082120001213386X","sex":null,"age":null,"idCardAdrs":null,"nation":null,"issuedBy":null,"certValidDateStart":null,"certValidDateEnd":null,"legalMobile":null},"enterpriseAccountInfo":null,"enterpriseContact":null,"enterpriseCredit":null,"enterpriseCreditInvestor":null,"enterpriseCreditManager":null,"enterpriseCreditRelateCom":null,"enterpriseCreditAttentLoan":null,"enterpriseCreditBadLoan":null,"enterpriseCreditDebtInfo":null,"enterpriseCreditExtGuarant":null,"enterpriseCreditNorLoan":null,"housePropertyCertificate":null,"housePropertyPledgeInfo":null,"housePropertyTransfer":null,"housePropertyTransferPledgeInfo":null,"idCard":null,"personalApplyForm":null,"personalApplyLink":null,"personalHouseholdRegister":null,"personalCreditDetailLoan":null,"personalCreditDetail":null,"personalCreditDetailStatistics":null,"personalCreditSimple":null,"personalCreditSimpleStatistics":null,"vehicleDriveLicense":null,"vehicleRegCertificate":null,"vehicleChangeInfo":null,"vehiclePledgeInfo":null,"vehicleTransferRegLast":null,"vehicleTransferReg":null,"invoiceInfo":null,"financialStatementsBeginOne":null,"financialStatementsBeginTwo":null,"financialStatementsBeginThree":null,"financialStatementsBeginFour":null,"financialStatementsBeginFive":null,"financialStatementsBeginSix":null,"financialStatementsEndOne":null,"financialStatementsEndTwo":null,"financialStatementsEndThree":null,"financialStatementsEndFour":null,"financialStatementsEndFive":null,"financialStatementsEndSix":null,"receiveAccountsCollect":{"id":null,"taskId":null,"compId":"43","totalAmount":110000.00,"matchAmount":1000.00},"receiveAccountsDetail":[{"id":null,"taskId":null,"compId":"44","sequenceNo":"ineterfaceId0012z22","payerName":"接口测试专用支付企业","receiveName":"接口测试专用","cashDate":"2022-06-10","amount":1000.00,"availableAmount":1000.00,"loanAmount":0.00,"status":"0"}],"operatorInfo":{"id":null,"taskId":null,"compId":"41","operatorName":"吕宜","operatorIdCard":"411527198302072669","operatorContractInfo":"18805444341"}}'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'request': '{"orderNo":"202112311057018921476749205371572228","systemCode":"LOAN_H5","businessType":0,"productType":"PRD00H51","channelType":"XSH001","taskType":1,"customerType":1,"fundName":"慧新小贷","name":"接口测试专用","mobile":"18805444341","idNo":"632323197407098700","financeAmount":1000.00,"financePeriod":"100","financeRepayType":"30","legalName":"尉迟行","linkName":"吕宜","establishDate":"2018-12-01","regCapital":5000000.00,"createRemarks":null,"source":"runthink-service-api","taskFile":[{"id":null,"taskId":null,"compId":"11","compAttributeId":"86","fileId":"1473838636465356802","fileName":"微信图片_20210908140819.jpg","flowNote":null,"fileType":"","uri":"7047a383-9a91-4fed-9e2c-c37e7f5ace8f"},{"id":null,"taskId":null,"compId":"11","compAttributeId":"86","fileId":"1473838622729011201","fileName":"微信图片_20210908140806.jpg","flowNote":null,"fileType":"","uri":"735ac8a4-7e45-4515-a4ed-87303782e382"},{"id":null,"taskId":null,"compId":"7","compAttributeId":"47","fileId":"1473838714001260545","fileName":"微信截图_20210830110539.png","flowNote":null,"fileType":"","uri":"bded548e-88c5-4c2b-b6b3-11db3b5ceadc"}],"enterpriseBusinessLicense":{"id":null,"taskId":null,"compId":"7","companyName":"接口测试专用","socialCode":"632323197407098700","legalName":"尉迟行","regCapital":"5000000.00","establishDate":"2018-12-01","residence":"上海市虹口区飞虹路360弄9号3637P室","companyType":null,"registrar":null,"businessScope":null,"businessTermStart":null,"businessTermEnd":null,"provence":null,"city":null,"industryType":null,"organizationType":null,"contactAddr":null,"tradeType":null,"tradeScope":null,"carrierCode":null,"contactEmail":null},"enterpriseShareholderInfo":null,"enterpriseManagerList":null,"enterpriseBeneficiaryInfo":null,"enterpriseShareholderBusinessLicense":null,"enterpriseShareholderIdCard":null,"enterpriseLegalIdCard":{"id":null,"taskId":null,"compId":"11","name":"尉迟行","idCard":"45082120001213386X","sex":null,"age":null,"idCardAdrs":null,"nation":null,"issuedBy":null,"certValidDateStart":null,"certValidDateEnd":null,"legalMobile":null},"enterpriseAccountInfo":null,"enterpriseContact":null,"enterpriseCredit":null,"enterpriseCreditInvestor":null,"enterpriseCreditManager":null,"enterpriseCreditRelateCom":null,"enterpriseCreditAttentLoan":null,"enterpriseCreditBadLoan":null,"enterpriseCreditDebtInfo":null,"enterpriseCreditExtGuarant":null,"enterpriseCreditNorLoan":null,"housePropertyCertificate":null,"housePropertyPledgeInfo":null,"housePropertyTransfer":null,"housePropertyTransferPledgeInfo":null,"idCard":null,"personalApplyForm":null,"personalApplyLink":null,"personalHouseholdRegister":null,"personalCreditDetailLoan":null,"personalCreditDetail":null,"personalCreditDetailStatistics":null,"personalCreditSimple":null,"personalCreditSimpleStatistics":null,"vehicleDriveLicense":null,"vehicleRegCertificate":null,"vehicleChangeInfo":null,"vehiclePledgeInfo":null,"vehicleTransferRegLast":null,"vehicleTransferReg":null,"invoiceInfo":null,"financialStatementsBeginOne":null,"financialStatementsBeginTwo":null,"financialStatementsBeginThree":null,"financialStatementsBeginFour":null,"financialStatementsBeginFive":null,"financialStatementsBeginSix":null,"financialStatementsEndOne":null,"financialStatementsEndTwo":null,"financialStatementsEndThree":null,"financialStatementsEndFour":null,"financialStatementsEndFive":null,"financialStatementsEndSix":null,"receiveAccountsCollect":{"id":null,"taskId":null,"compId":"43","totalAmount":110000.00,"matchAmount":1000.00},"receiveAccountsDetail":[{"id":null,"taskId":null,"compId":"44","sequenceNo":"ineterfaceId0012z22","payerName":"接口测试专用支付企业","receiveName":"接口测试专用","cashDate":"2022-06-10","amount":1000.00,"availableAmount":1000.00,"loanAmount":0.00,"status":"0"}],"operatorInfo":{"id":null,"taskId":null,"compId":"41","operatorName":"吕宜","operatorIdCard":"411527198302072669","operatorContractInfo":"18805444341"}}'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'enterprise_business_license_compId': '7', 'companyName': '接口测试专用', 'establishDate': datetime.date(2018, 12, 1), 'enterprise_business_license_id': '1476749222517907457', 'regCapital': '5000000.00', 'socialCode': '632323197407098700'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'enterprise_business_license_compId': '7', 'companyName': '接口测试专用', 'establishDate': '2018-12-01', 'enterprise_business_license_id': '1476749222517907457', 'regCapital': '5000000.00', 'socialCode': '632323197407098700'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'enterprise_legal_id_card_compId': '11', 'enterprise_legal_id_card_id': '1476749222807314434', 'idCard': '45082120001213386X', 'issuedBy': '', 'legalname': '尉迟行', 'nation': '中国', 'sex': '男'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'enterprise_legal_id_card_compId': '11', 'enterprise_legal_id_card_id': '1476749222807314434', 'idCard': '45082120001213386X', 'issuedBy': '', 'legalname': '尉迟行', 'nation': '中国', 'sex': '男'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'operator_info_compId': '41', 'operator_info_id': '1476749222916366338', 'operatorContractInfo': '18805444341', 'operatorIdCard': '411527198302072669', 'operatorName': '吕宜'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'operator_info_compId': '41', 'operator_info_id': '1476749222916366338', 'operatorContractInfo': '18805444341', 'operatorIdCard': '411527198302072669', 'operatorName': '吕宜'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'receive_accounts_collect_id': '1476749222857646082', 'receive_accounts_collect_compId': '43', 'matchAmount': Decimal('1000.00'), 'totalAmount': Decimal('110000.00')}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'receive_accounts_collect_id': '1476749222857646082', 'receive_accounts_collect_compId': '43', 'matchAmount': '1000.00', 'totalAmount': '110000.00'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'receive_accounts_detail_compId': '44', 'amount': Decimal('1000.00'), 'availableAmount': Decimal('1000.00'), 'cashDate': datetime.date(2022, 6, 10), 'groupIndex': 0, 'loanAmount': Decimal('0.00'), 'payerName': '接口测试专用支付企业', 'receiveName': '接口测试专用', 'sequenceNo': 'ineterfaceId0012z22', 'status': '0'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'receive_accounts_detail_compId': '44', 'amount': '1000.00', 'availableAmount': '1000.00', 'cashDate': '2022-06-10', 'groupIndex': '0', 'loanAmount': '0.00', 'payerName': '接口测试专用支付企业', 'receiveName': '接口测试专用', 'sequenceNo': 'ineterfaceId0012z22', 'status': '0'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'compAttributeId_0': '86', 'task_file_compId_0': '11', 'fileId_0': '1473838636465356802', 'fileType_0': '', 'task_file_id_0': '1476749222492741633', 'uri_0': '7047a383-9a91-4fed-9e2c-c37e7f5ace8f'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:64] INFO 0 ---as---('86', '11', '1473838636465356802', '', '1476749222492741633', '7047a383-9a91-4fed-9e2c-c37e7f5ace8f')
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'compAttributeId_1': '86', 'task_file_compId_1': '11', 'fileId_1': '1473838622729011201', 'fileType_1': '', 'task_file_id_1': '1476749222496935937', 'uri_1': '735ac8a4-7e45-4515-a4ed-87303782e382'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:64] INFO 1 ---as---('86', '11', '1473838622729011201', '', '1476749222496935937', '735ac8a4-7e45-4515-a4ed-87303782e382')
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'compAttributeId_2': '47', 'task_file_compId_2': '7', 'fileId_2': '1473838714001260545', 'fileType_2': '', 'task_file_id_2': '1476749222496935938', 'uri_2': 'bded548e-88c5-4c2b-b6b3-11db3b5ceadc'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:64] INFO 2 ---as---('47', '7', '1473838714001260545', '', '1476749222496935938', 'bded548e-88c5-4c2b-b6b3-11db3b5ceadc')
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:32] INFO <class 'list'>
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:54] INFO {'approvalDesc': '接口自动化提款审批数据勿动', 'approvalFinanceAmount': Decimal('1000.00'), 'approvalFinancePeriod': '100', 'approvalFinanceRepayType': '30'}
+Fri, 31 Dec 2021 12:52:14 dbutils.py[line:143] INFO 存入的值为{'approvalDesc': '接口自动化提款审批数据勿动', 'approvalFinanceAmount': '1000.00', 'approvalFinancePeriod': '100', 'approvalFinanceRepayType': '30'}
+Fri, 31 Dec 2021 12:52:14 caseAssemble.py[line:222] ERROR ('decoding to str: need a bytes-like object, NoneType found',)
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:63] INFO url is: http://api-dev.runthinkenv.com/api/riskApproval/task/approval/commit
+Fri, 31 Dec 2021 12:52:14 connectionpool.py[line:227] DEBUG Starting new HTTP connection (1): api-dev.runthinkenv.com:80
+Fri, 31 Dec 2021 12:52:14 connectionpool.py[line:452] DEBUG http://api-dev.runthinkenv.com:80 "POST /api/riskApproval/task/approval/commit HTTP/1.1" 200 92
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:69] INFO None
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:78] INFO {
+  "Content-Type": "application/json",
+  "Authorization": "bearer a7c12dc4-75d8-4cc2-a46a-f9aeda8386b1",
+  "runthink-sign": "67afbab331499bc7cc42c2a23eccdbca"
+}
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:80] INFO {'Server': 'nginx/1.18.0', 'Date': 'Fri, 31 Dec 2021 04:52:14 GMT', 'Content-Type': 'application/json', 'Content-Length': '92', 'Connection': 'keep-alive', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'traceId': 'lF3JN28bG71e4489', 'Location': None}
+Fri, 31 Dec 2021 12:52:14 sendrequests.py[line:93] INFO json请求响应码200
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:44] INFO 案例执行完毕，参数打印如下: 请求参数
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:45] INFO "$.approvalDesc=\"${#approvalDesc}\",\n$.approvalFinanceAmount=\"${#approvalFinanceAmount}\",\n$.approvalFinancePeriod=\"${#approvalFinancePeriod}\",\n$.approvalFinanceRepayType=\"${#approvalFinanceRepayType}\",\n$.creditRate=0,\n$.enterpriseBusinessLicense.compId=\"${#enterprise_legal_id_card_compId}\",\n$.enterpriseBusinessLicense.companyName=\"${#companyName}\",\n$.enterpriseBusinessLicense.establishDate=\"${#establishDate}\",\n$.enterpriseBusinessLicense.id=\"${#enterprise_business_license_id}\",\n$.enterpriseBusinessLicense.regCapital=\"${#regCapital}\",\n$.enterpriseBusinessLicense.socialCode=\"${#socialCode}\",\n$.enterpriseBusinessLicense.taskId=\"${#taskId}\",\n$.enterpriseLegalIdCard.compId=\"${#enterprise_legal_id_card_compId}\",\n$.enterpriseLegalIdCard.id=\"${#enterprise_legal_id_card_id}\",\n$.enterpriseLegalIdCard.idCard=\"${#idCard}\",\n$.enterpriseLegalIdCard.issuedBy=\"${#issuedBy}\"\n"
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:48] INFO 响应参数
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:49] INFO {
+  "code": "500",
+  "data": null,
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "msg": "请求参数错误"
+}
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:52] INFO traceId:lF3JN28bG71e4489
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:57] INFO 延迟时间为0
+Fri, 31 Dec 2021 12:52:14 testCaseSuite.py[line:67] INFO 结束执行1640926334.4815094

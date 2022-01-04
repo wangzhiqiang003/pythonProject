@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/run" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Utils/lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/suite" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

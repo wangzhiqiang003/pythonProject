@@ -1,0 +1,1821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>runthink接口自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.img{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+    border: 2px solid #777;
+}
+
+.screenshots {
+    z-index: 100;
+	position:absolute;
+	left: 23%;
+	top: 20%;
+	display: none;
+}
+.close_shots {
+	position:absolute;
+	top:0; left:98%;
+	z-index:99;
+	width:20px;
+}
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 800px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; font-weight: bold;}
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+.piechart{
+    position:absolute;  ;
+    top:20px;
+    left:350px;
+    width: 200px;
+    float: left;
+    display:  inline;
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* 增加显示通过分类列表  --YinJia */
+/* level - 0:Summary; 1:Failed; 2:Pass; 3:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+/* 增加饼图显示  --YinJia */
+function drawCircle(pass, fail, error){
+    var color = ["#6c6","#c60","#c00"];
+    var data = [pass,fail,error];
+    var text_arr = ["pass", "fail", "error"];
+
+    var canvas = document.getElementById("circle");
+    var ctx = canvas.getContext("2d");
+    var startPoint=0;
+    var width = 20, height = 10;
+    var posX = 112 * 2 + 20, posY = 30;
+    var textX = posX + width + 5, textY = posY + 10;
+    for(var i=0;i<data.length;i++){
+        ctx.fillStyle = color[i];
+        ctx.beginPath();
+        ctx.moveTo(112,84);
+        ctx.arc(112,84,84,startPoint,startPoint+Math.PI*2*(data[i]/(data[0]+data[1]+data[2])),false);
+        ctx.fill();
+        startPoint += Math.PI*2*(data[i]/(data[0]+data[1]+data[2]));
+        ctx.fillStyle = color[i];
+        ctx.fillRect(posX, posY + 20 * i, width, height);
+        ctx.moveTo(posX, posY + 20 * i);
+        ctx.font = 'bold 14px';
+        ctx.fillStyle = color[i];
+        var percent = text_arr[i] + ":"+data[i];
+        ctx.fillText(percent, textX, textY + 20 * i);
+
+    }
+}
+
+function show_shots(obj) {
+	obj.nextElementSibling.style.display="block";
+
+}
+
+function close_shots(obj) {
+	obj.parentElement.style.display="none";
+}
+
+
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div class="piechart">
+    <div>
+        <canvas id="circle" width="350" height="168" </canvas>
+    </div>
+</div>
+<div class='heading'>
+<h1>runthink接口自动化测试报告</h1>
+<p class='attribute'><strong>测试人员:</strong> wangzhiqiang</p>
+<p class='attribute'><strong>开始时间:</strong> 2022-01-04 09:52:08</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:05:30.493244</p>
+<p class='attribute'><strong>测试结果:</strong> 总共 29 通过 26 失败 2 错误 1 通过率 = 89.66%</p>
+
+<p class='description'>环境：windows 7 浏览器：chrome</p>
+</div>
+
+
+
+<p id='show_detail_line'>显示
+<a href='javascript:showCase(0)'>概要</a>
+<a href='javascript:showCase(1)'>失败[2]</a>
+<a href='javascript:showCase(2)'>通过[26]</a>
+<a href='javascript:showCase(3)'>所有[29]</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>视图</td>
+    <td>错误截图</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testCaseSuite.Runner</td>
+    <td>29</td>
+    <td>26</td>
+    <td>2</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',29)">详情</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+    <tr id='pt1.1' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_01_登录密钥获取</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+            通过</a>
+
+        <div id='div_pt1.1' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.1: request {
+  "srcCode": "yunlibao_100001"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "privateKey": "ae990f97d0e610cd1f334778eb713807",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgW1UHZqgSQYqc0JJ9wB4SpSzT39QBBWrYAGjJi9Tc8HWoYvpi876FTltrXgDywlQ0pTq9zpQpqfyhckdgz3iQKCQWyUlOeZA01ydzkQa7HYZ-IknXVUn9pxWHTghndlBUNQ6nQPsJ1-tChDCwSZnmDCWwkmvFxMr6TezDOkhCgYE7bCijGQocZDPzUdZPXUd5YbTcbCzMMGHP9ul8UMlmq-274vC8wapWN4zHZHnexHgLWx4hl0I1aYsgKWcVrpxiXYqcN2CinhNg5srSKX7chw8BrdHwVLzWkDHN7DelzQmxf5a-KkR6CS0GZnEjiGGnI42R8-VqhFC6GiY29vIcQIDAQAB"
+  }
+}
+response &lt;Response [200]&gt;
+eTse0jCfIgCXAo9H
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.2' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_02_流贷密码登录</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+            通过</a>
+
+        <div id='div_pt1.2' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.2: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgW1UHZqgSQYqc0JJ9wB4SpSzT39QBBWrYAGjJi9Tc8HWoYvpi876FTltrXgDywlQ0pTq9zpQpqfyhckdgz3iQKCQWyUlOeZA01ydzkQa7HYZ-IknXVUn9pxWHTghndlBUNQ6nQPsJ1-tChDCwSZnmDCWwkmvFxMr6TezDOkhCgYE7bCijGQocZDPzUdZPXUd5YbTcbCzMMGHP9ul8UMlmq-274vC8wapWN4zHZHnexHgLWx4hl0I1aYsgKWcVrpxiXYqcN2CinhNg5srSKX7chw8BrdHwVLzWkDHN7DelzQmxf5a-KkR6CS0GZnEjiGGnI42R8-VqhFC6GiY29vIcQIDAQAB
+Public RSA key at 0x2C026468760
+eDvVqGANNInRKA7aWS3V3Oqx09aaSEPajxiqDkO5HKIWww5lwvDh0W04tJzcuaSqxldVTZD5aqwpvYsjeshvYq13BBXXM8SxsWnoCzzUruM2Uc+zmDHbwFUdUSneXfImBprbT8xs1vEhy50wQI0ONy6+P6H5nkOWgbYvVZ/YC2EVvG7VrRRpE/isImtIw+KCiUaHfjUdN8g/rV3C4KOFQoFlg/IvC7NhK7+6Q44S1S+5ih7XgjNfIEAERNohtDHbQcZndLIupgwh3qzE04H6V1/UwUNoS/fHxzC217Y9Bbkht1RNuAP1JgM6+LwTUBAVOPzt9Us9chsQ5A6tYh5uMA==
+request {
+  "phone": "18805444341",
+  "loginPassword": "eDvVqGANNInRKA7aWS3V3Oqx09aaSEPajxiqDkO5HKIWww5lwvDh0W04tJzcuaSqxldVTZD5aqwpvYsjeshvYq13BBXXM8SxsWnoCzzUruM2Uc+zmDHbwFUdUSneXfImBprbT8xs1vEhy50wQI0ONy6+P6H5nkOWgbYvVZ/YC2EVvG7VrRRpE/isImtIw+KCiUaHfjUdN8g/rV3C4KOFQoFlg/IvC7NhK7+6Q44S1S+5ih7XgjNfIEAERNohtDHbQcZndLIupgwh3qzE04H6V1/UwUNoS/fHxzC217Y9Bbkht1RNuAP1JgM6+LwTUBAVOPzt9Us9chsQ5A6tYh5uMA==",
+  "privateKey": "ae990f97d0e610cd1f334778eb713807",
+  "srcCode": "yunlibao_100001"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": "2c081398-9125-4db6-8ab7-9baccc43eabf"
+}
+response &lt;Response [200]&gt;
+9H52Gg33eNv41L93
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.3' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_03_登录验证码发送</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+            通过</a>
+
+        <div id='div_pt1.3' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.3: request {
+  "srcCode": "yunlibao_100001",
+  "phone": "18805444341",
+  "codeType": "LOGIN"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": "c46dab8aa65562772b8afa67bd7a664b"
+}
+response &lt;Response [200]&gt;
+9nVHI61U52Jh4Xy5
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.4' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_04_验证码登录</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+            通过</a>
+
+        <div id='div_pt1.4' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.4: request {
+  "phone": "18805444341",
+  "srcCode": "yunlibao_100001",
+  "verifyCode": "611230",
+  "verifyId": "c46dab8aa65562772b8afa67bd7a664b"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": "7740c083-b61b-4262-a8e6-0096f3e225e8"
+}
+response &lt;Response [200]&gt;
+tjMoeCatp30YN7Ci
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.5' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_05_进入产品</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+            通过</a>
+
+        <div id='div_pt1.5' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.5: request {
+  "productNo": "PRD00H51"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+JkXe9NohJM4n6LH9
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.6' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_06_绑定银行卡_正向_</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+            通过</a>
+
+        <div id='div_pt1.6' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.6: request {
+  "accountName": "接口测试专用有限公司",
+  "accountNo": "6226767107210586",
+  "bankCnaps": {
+    "bankCity": "湖州市",
+    "bankCode": "ABC",
+    "bankName": "中国农业银行股份有限公司",
+    "bankProvence": "浙江省",
+    "cnapsCode": "103336212610",
+    "cnapsName": "中国农业银行长兴县和平支行"
+  },
+  "cnapsCode": "103336212610",
+  "sourceType": "0"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": "1478182437963124737"
+}
+response &lt;Response [200]&gt;
+sH3xQl96cR26Il2d
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.7' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_07_获取银行卡认证信息</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+            通过</a>
+
+        <div id='div_pt1.7' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.7: request {
+  "cardId": "1478182437963124737",
+  "authType": 1
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+JE9D10oN0empbTl0
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.8' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_08_认证银行卡</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+            通过</a>
+
+        <div id='div_pt1.8' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.8: request {
+  "cardId": "1478182437963124737"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "applyId": "1478182439133335553",
+    "cardId": "1478182437963124737",
+    "accountNo": null,
+    "accountName": null,
+    "cnapsName": null,
+    "authType": "1",
+    "authStatus": "1",
+    "paymentAmount": null,
+    "paymentDeadline": null,
+    "positiveCheckCount": 3
+  }
+}
+response &lt;Response [200]&gt;
+oKn87105h37m6r3v
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.9' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_09_校验银行卡认证打款结果</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+            通过</a>
+
+        <div id='div_pt1.9' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.9: request {
+  "applyId": "1478182439133335553",
+  "authType": "1",
+  "paymentAmount": 0.11
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+337WUBiE9N9C1dX4
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.10' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_10_绑定银行卡_认证_</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+            通过</a>
+
+        <div id='div_pt1.10' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.10: request {
+  "accountName": "接口测试专用有限公司",
+  "accountNo": "6226761960075799",
+  "bankCnaps": {
+    "bankCity": "湖州市",
+    "bankCode": "ABC",
+    "bankName": "中国农业银行股份有限公司",
+    "bankProvence": "浙江省",
+    "cnapsCode": "103336212610",
+    "cnapsName": "中国农业银行长兴县和平支行"
+  },
+  "cnapsCode": "103336212610",
+  "sourceType": "0"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": "1478182444476878850"
+}
+response &lt;Response [200]&gt;
+5N3F6K8RRyEHIMCQ
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.11' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_11_认证银行卡</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+            通过</a>
+
+        <div id='div_pt1.11' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.11: request {
+  "cardId": "1478182444476878850",
+  "authType": 2
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+G9o3aj4Nu1d45OQb
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.12' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_12_获取银行卡认证信息</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+            通过</a>
+
+        <div id='div_pt1.12' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.12: request {
+  "cardId": "1478182444476878850"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "applyId": "1478182445965856770",
+    "cardId": "1478182444476878850",
+    "accountNo": null,
+    "accountName": null,
+    "cnapsName": null,
+    "authType": "2",
+    "authStatus": "1",
+    "paymentAmount": 0.88,
+    "paymentDeadline": "2022-01-11 09:52:13",
+    "positiveCheckCount": null
+  }
+}
+response &lt;Response [200]&gt;
+NgN4VRgNkPduH50p
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.13' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_13_校验银行卡认证_反向_</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+            通过</a>
+
+        <div id='div_pt1.13' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.13: request {
+  "applyId": "1478182445965856770",
+  "authType": 2,
+  "paymentAmount": 0.11
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+bsxo63jUYaAa90FS
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.14' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_14_设置默认银行卡</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+            通过</a>
+
+        <div id='div_pt1.14' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.14: request {
+  "applyId": "1468396649847177218",
+  "cardId": "1478182444476878850"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+46E6IX72h87eBy97
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.15' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_15_提现获取密钥</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+            通过</a>
+
+        <div id='div_pt1.15' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.15: request {
+  "srcCode": "yunlibao_100001"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "privateKey": "1bd03b3d07888ede277000d8b3861412",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAniLjWC8gmxNlMOoz88U-CJ8-otEEAjT1ibc-_zNoXV04Kk_BO7-G1R14hC0fY7EGV7NxPOlDK3BqBebKTXPzD3WQjcXXr0O_9SheAP3OODckKU8e1ae1DIx7EwVsUb7Bb5mNaormpPX0GM3bLzpf6Jv4x4cKWNiq8Zuj8n6_U1jk00V8WYP8OZEPh52PDmqUNWevxb_dA31DHf0xgiyAHe6g8nBn3ZBJ8yyEP1fR0ZRYH-Yhi0qzuXxUwUw5Ff4ecrrYewVBM28BeMgTUNeZG_NPP7BiumFBmsatOcyJDmANygmmcHVvr5t_nI8ZRYpwpbxE_e_F06y4lreFs7kc1wIDAQAB"
+  }
+}
+response &lt;Response [200]&gt;
+I0g7Ljp6Lq7pGDIF
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.16' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_16_提现成功</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+            通过</a>
+
+        <div id='div_pt1.16' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.16: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAniLjWC8gmxNlMOoz88U-CJ8-otEEAjT1ibc-_zNoXV04Kk_BO7-G1R14hC0fY7EGV7NxPOlDK3BqBebKTXPzD3WQjcXXr0O_9SheAP3OODckKU8e1ae1DIx7EwVsUb7Bb5mNaormpPX0GM3bLzpf6Jv4x4cKWNiq8Zuj8n6_U1jk00V8WYP8OZEPh52PDmqUNWevxb_dA31DHf0xgiyAHe6g8nBn3ZBJ8yyEP1fR0ZRYH-Yhi0qzuXxUwUw5Ff4ecrrYewVBM28BeMgTUNeZG_NPP7BiumFBmsatOcyJDmANygmmcHVvr5t_nI8ZRYpwpbxE_e_F06y4lreFs7kc1wIDAQAB
+Public RSA key at 0x2C02651AF40
+FULKDPMs0uj8swOCq+RMaT8JKM25k1gP1oRl3XhAwWGKkQvCz0UIwSHVRc8XclAFqXHfDOOkpRRAV3r3kNsrunxmc8CRok9hOBrtgyQj4TYlBo8IVjVCDgWqtrZo8PjYZ4Yjvkko4UYLHj7M4h93byQKwGduQMPW3Ki3OTdDBNlTTI/tvClwARcYBI8aRbjyQwqNm7lzZi7kNblqqceaudrWb3DGRZVHHIWpYZL9R5JXzqB9adHSOX4QqwtPNIv3Q+UWPieMzIcfa0bjaD6idUeYkpVukbvP5HmgevyqLhne3jVJ6FqfrYOL/MCKbXbKGKe0slXWQMgt/m1Ocj+VAw==
+request {
+  "tradeAbstract": "",
+  "virtualAccountNo": "9595000091240004",
+  "withdrawAmount": 12000,
+  "withdrawCardId": "1478182437963124737",
+  "privateKey": "1bd03b3d07888ede277000d8b3861412",
+  "txPassword": "FULKDPMs0uj8swOCq+RMaT8JKM25k1gP1oRl3XhAwWGKkQvCz0UIwSHVRc8XclAFqXHfDOOkpRRAV3r3kNsrunxmc8CRok9hOBrtgyQj4TYlBo8IVjVCDgWqtrZo8PjYZ4Yjvkko4UYLHj7M4h93byQKwGduQMPW3Ki3OTdDBNlTTI/tvClwARcYBI8aRbjyQwqNm7lzZi7kNblqqceaudrWb3DGRZVHHIWpYZL9R5JXzqB9adHSOX4QqwtPNIv3Q+UWPieMzIcfa0bjaD6idUeYkpVukbvP5HmgevyqLhne3jVJ6FqfrYOL/MCKbXbKGKe0slXWQMgt/m1Ocj+VAw=="
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "flowNo": "1478182454148939777",
+    "withdrawStatus": "2"
+  }
+}
+response &lt;Response [200]&gt;
+BChNrdGbf5VGw5k0
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.17' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_17_回单下载密钥获取</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.17')" >
+            通过</a>
+
+        <div id='div_pt1.17' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.17').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.17: request {
+  "srcCode": "yunlibao_100001"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "privateKey": "d9b2e1e524acda07e94e321ec902286e",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqnQbXejA8WO1P09UmZDk3oNpL83xEMWQKfZ27wzF4lsm6fMXWfFVtg_kXd22faKY1m7pHYrU2QnqvuX7m7kkgrkViRcb3PPn-cXg4828eaTIwvrsHMk2RGNiA1v6nw87nktTgakLXxdAsfnioIqnGTah77khA4mrk3yogAaJj9MPJGaWqeUBIDqjjPwF3S3_p7CISOTCb3Ox6UK82lqWr16x2FNU-mrX1SZWvyMkrBK3JgLdtmqRhLMceRmzjdksEz93zLAe8iyHl5ZDDBAOYbwtMTWOq_xX3Awnd1P2JjpGH-AtxSOiegKmZlByu8rLFJzGJqNDAeaQJAgzVUVgJwIDAQAB"
+  }
+}
+response &lt;Response [200]&gt;
+lBJ87hM414y0xQv4
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.18' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_18_回单下载成功</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+            通过</a>
+
+        <div id='div_pt1.18' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.18').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.18: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqnQbXejA8WO1P09UmZDk3oNpL83xEMWQKfZ27wzF4lsm6fMXWfFVtg_kXd22faKY1m7pHYrU2QnqvuX7m7kkgrkViRcb3PPn-cXg4828eaTIwvrsHMk2RGNiA1v6nw87nktTgakLXxdAsfnioIqnGTah77khA4mrk3yogAaJj9MPJGaWqeUBIDqjjPwF3S3_p7CISOTCb3Ox6UK82lqWr16x2FNU-mrX1SZWvyMkrBK3JgLdtmqRhLMceRmzjdksEz93zLAe8iyHl5ZDDBAOYbwtMTWOq_xX3Awnd1P2JjpGH-AtxSOiegKmZlByu8rLFJzGJqNDAeaQJAgzVUVgJwIDAQAB
+Public RSA key at 0x2C0265107F0
+P3rn4GCeJTzcrwATCU9cSRNvTH7bFeanpASHuaMyGIeclDwG2zDs3uxPQ0bDfJzDeXpVFwNdbPYCQmZFSHiIiX4/YNmXXrkPoZp0oXb2PfH6uQKFfqMJ9gQ7DbUJ8EnHjjxG/mTv8gxp/BG9QGDZpnA+AO51q3OvJ9txrz9wolYdSRuOMQo1vjclyYqTkUYVFgi2GqhdpTBdzF+GtO+ihX2YSM4OThppjZ6dhOr3rQEAgNeHtA5CgkurdrqpbgfxQtryqaFm01qwViY9RML2KrT52dhm27pk4rzXklHohbL9xCfztrZ8niuK/Cz00UUHMb6CBCvzva0sudqehDQRcg==
+request {
+  "billingIds": [
+    "1478182454148939777"
+  ],
+  "receiveEmail": "wangzhiqiang@runthinkdtech.com",
+  "virtualAccountNo": "9595000091240004",
+  "privateKey": "d9b2e1e524acda07e94e321ec902286e",
+  "txPassword": "P3rn4GCeJTzcrwATCU9cSRNvTH7bFeanpASHuaMyGIeclDwG2zDs3uxPQ0bDfJzDeXpVFwNdbPYCQmZFSHiIiX4/YNmXXrkPoZp0oXb2PfH6uQKFfqMJ9gQ7DbUJ8EnHjjxG/mTv8gxp/BG9QGDZpnA+AO51q3OvJ9txrz9wolYdSRuOMQo1vjclyYqTkUYVFgi2GqhdpTBdzF+GtO+ihX2YSM4OThppjZ6dhOr3rQEAgNeHtA5CgkurdrqpbgfxQtryqaFm01qwViY9RML2KrT52dhm27pk4rzXklHohbL9xCfztrZ8niuK/Cz00UUHMb6CBCvzva0sudqehDQRcg=="
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+ImVI5kfP15E4y8Mh
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.19' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_19_还款试算</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.19')" >
+            通过</a>
+
+        <div id='div_pt1.19' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.19').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.19: request {
+  "loanAmount": 1000,
+  "repayKind": "30",
+  "receiveCardId": "1478182437963124737"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "receiveSumAmt": 110000.0,
+    "receiveMatchSumAmt": 1000.0,
+    "repayKind": "30",
+    "repayKindName": "一次性还本付息",
+    "yearRate": 10.0,
+    "dailyRate": 0.02777778,
+    "fundYearRate": null,
+    "fundDailyRate": null,
+    "payOffFeeRate": null,
+    "loanAmount": 1000,
+    "multipleTotalInterestAmount": 23.06,
+    "multipleTotalFeeAmt": 2.31,
+    "repaymentPlanTrials": [
+      {
+        "sequenceNo": "ineterfaceId0012z72",
+        "contractSignDate": null,
+        "contractName": "",
+        "contractNo": "",
+        "invoiceNo": "",
+        "dueDate": "2022-06-27",
+        "beginInterestDate": "2022-04-05",
+        "loanCycleUnit": "1",
+        "loanCycle": 83,
+        "totalAmount": 1023.06,
+        "totalPrincipalAmount": 1000.0,
+        "totalInterestAmount": 23.06,
+        "totalFeeAmt": 2.31,
+        "payerName": "接口测试专用支付企业",
+        "receiveName": "接口测试专用",
+        "cashDate": "2022-06-24",
+        "amount": 1000.0,
+        "availableAmount": 1000.0,
+        "loanAmount": 0.0,
+        "status": false,
+        "repaymentPlanDetailList": [
+          {
+            "period": 1,
+            "statementDate": "2022-06-27 00:00:00",
+            "totalAmount": 1023.06,
+            "principalAmount": 1000.0,
+            "interestAmount": 23.06,
+            "feeAmt": 2.31,
+            "beginInterestDate": "2022-04-05 00:00:00"
+          }
+        ]
+      }
+    ],
+    "receiveBankCard": {
+      "cardId": "1478182437963124737",
+      "sourceType": "0",
+      "bankName": "中国农业银行股份有限公司",
+      "bankCode": "ABC",
+      "accountNo": "6226767107210586",
+      "accountName": "接口测试专用有限公司",
+      "bankProvence": "浙江省",
+      "bankCity": "湖州市",
+      "cnapsName": "中国农业银行长兴县和平支行",
+      "cnapsCode": "103336212610",
+      "authentication": true,
+      "defaultCard": false
+    },
+    "repayBankQueryRpcVo": {
+      "custNo": "1468104543345729538",
+      "acctType": "0",
+      "acctNo": "9595000091240004",
+      "acctName": "接口测试专用",
+      "idCard": "411527198302072669",
+      "phoneNo": "18805444341",
+      "bankCode": "CMBC",
+      "bankName": "中国农业银行股份有限公司",
+      "supervisionCode": "6025",
+      "bankProvence": "浙江省",
+      "bankCity": "湖州市",
+      "cnapsName": "中国农业银行长兴县和平支行",
+      "cnapsCode": "103336212610"
+    }
+  }
+}
+response &lt;Response [200]&gt;
+EiJvB4MCk3FnmCNJ
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.20' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_20_放款获取密钥</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.20')" >
+            通过</a>
+
+        <div id='div_pt1.20' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.20').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.20: request {
+  "srcCode": "yunlibao_100001"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "privateKey": "96a54a8d613b042ebde0e8ca05af40b4",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvV2JIlxxBcQhY98qpZsLl5dZDn444VkutYG8kPt5Qx4EQR2AGh0Wu7Mmoc5AHE9pNW8LA24C3pCGNlsrT_TBzBHo8P1MPkRPYHUMnEiWf49bAYd2kOqJ3WQkxCiRgxdKV_VS2Le9g-VEHaA7RpJ_1e8xleLvk6Iaer5h9rpbDf_QIAYUGQWAwBE8eeTOSa5WTXmGrxfP8zZXAniXFlKYF_Kamf7wx4arglSm-Y9S1jnVA769POXRmgDgSF5bUEchmMnnLbsdDqBo-KgBWI244XPkezVun2v_M7-e5UgRvL7GOPJ93zZ3Q3P-ty_FYMJzZhCci5NlBQJrUJjx-VLC2QIDAQAB"
+  }
+}
+response &lt;Response [200]&gt;
+9k8mF9iXBFxyKdN3
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.21' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_21_放款提交</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.21')" >
+            通过</a>
+
+        <div id='div_pt1.21' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.21').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.21: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvV2JIlxxBcQhY98qpZsLl5dZDn444VkutYG8kPt5Qx4EQR2AGh0Wu7Mmoc5AHE9pNW8LA24C3pCGNlsrT_TBzBHo8P1MPkRPYHUMnEiWf49bAYd2kOqJ3WQkxCiRgxdKV_VS2Le9g-VEHaA7RpJ_1e8xleLvk6Iaer5h9rpbDf_QIAYUGQWAwBE8eeTOSa5WTXmGrxfP8zZXAniXFlKYF_Kamf7wx4arglSm-Y9S1jnVA769POXRmgDgSF5bUEchmMnnLbsdDqBo-KgBWI244XPkezVun2v_M7-e5UgRvL7GOPJ93zZ3Q3P-ty_FYMJzZhCci5NlBQJrUJjx-VLC2QIDAQAB
+Public RSA key at 0x2C02653F8E0
+e1j+Jjh7k3dWJn18eRjIIJDcoXw+lotrjMi2chj1y706evdI3o2QaR7jX8B7FD5pbRUQ+ZMvs5lXg5GgIsh2exfdhlvnE0ZCWLEL0LDY01XJxIMYqVF36x7HVU7Mg3Lu0fMZeMIYDYNJz+dupqr8W+Aemq50Kuzyy05xGd3CUP9lgUaSpT3EN9/mps2zhMEwyt/bsUPe/3icfoSqW94gRD/nJtHcLnVlkRFio6cthXbyK9KMje15lrXobCbv2ZqiAP8kWDuM6tBSF93T6nOcWa9lRc8EnPOw8lvNoT8Kns5Rh9CD89ECzWSWRXl24eKwm+/MqVSKxdz8QeDe+6Z68A==
+request {
+  "loanAmount": 1000,
+  "multipleRepaymentPlanTrial": {
+    "receiveSumAmt": 110000.0,
+    "receiveMatchSumAmt": 1000.0,
+    "repayKind": "30",
+    "repayKindName": "一次性还本付息",
+    "yearRate": 10.0,
+    "dailyRate": 0.02777778,
+    "fundYearRate": null,
+    "fundDailyRate": null,
+    "payOffFeeRate": null,
+    "loanAmount": 1000,
+    "multipleTotalInterestAmount": 23.06,
+    "multipleTotalFeeAmt": 2.31,
+    "repaymentPlanTrials": [
+      {
+        "sequenceNo": "ineterfaceId0012z72",
+        "contractSignDate": null,
+        "contractName": "",
+        "contractNo": "",
+        "invoiceNo": "",
+        "dueDate": "2022-06-27",
+        "beginInterestDate": "2022-04-05",
+        "loanCycleUnit": "1",
+        "loanCycle": 83,
+        "totalAmount": 1023.06,
+        "totalPrincipalAmount": 1000.0,
+        "totalInterestAmount": 23.06,
+        "totalFeeAmt": 2.31,
+        "payerName": "接口测试专用支付企业",
+        "receiveName": "接口测试专用",
+        "cashDate": "2022-06-24",
+        "amount": 1000.0,
+        "availableAmount": 1000.0,
+        "loanAmount": 0.0,
+        "status": false,
+        "repaymentPlanDetailList": [
+          {
+            "period": 1,
+            "statementDate": "2022-06-27 00:00:00",
+            "totalAmount": 1023.06,
+            "principalAmount": 1000.0,
+            "interestAmount": 23.06,
+            "feeAmt": 2.31,
+            "beginInterestDate": "2022-04-05 00:00:00"
+          }
+        ]
+      }
+    ],
+    "receiveBankCard": {
+      "cardId": "1478182437963124737",
+      "sourceType": "0",
+      "bankName": "中国农业银行股份有限公司",
+      "bankCode": "ABC",
+      "accountNo": "6226767107210586",
+      "accountName": "接口测试专用有限公司",
+      "bankProvence": "浙江省",
+      "bankCity": "湖州市",
+      "cnapsName": "中国农业银行长兴县和平支行",
+      "cnapsCode": "103336212610",
+      "authentication": true,
+      "defaultCard": false
+    },
+    "repayBankQueryRpcVo": {
+      "custNo": "1468104543345729538",
+      "acctType": "0",
+      "acctNo": "9595000091240004",
+      "acctName": "接口测试专用",
+      "idCard": "411527198302072669",
+      "phoneNo": "18805444341",
+      "bankCode": "CMBC",
+      "bankName": "中国农业银行股份有限公司",
+      "supervisionCode": "6025",
+      "bankProvence": "浙江省",
+      "bankCity": "湖州市",
+      "cnapsName": "中国农业银行长兴县和平支行",
+      "cnapsCode": "103336212610"
+    }
+  },
+  "repayKind": "30",
+  "receiveCardId": "1478182437963124737",
+  "verifyCode": "111111",
+  "privateKey": "96a54a8d613b042ebde0e8ca05af40b4",
+  "txPassword": "e1j+Jjh7k3dWJn18eRjIIJDcoXw+lotrjMi2chj1y706evdI3o2QaR7jX8B7FD5pbRUQ+ZMvs5lXg5GgIsh2exfdhlvnE0ZCWLEL0LDY01XJxIMYqVF36x7HVU7Mg3Lu0fMZeMIYDYNJz+dupqr8W+Aemq50Kuzyy05xGd3CUP9lgUaSpT3EN9/mps2zhMEwyt/bsUPe/3icfoSqW94gRD/nJtHcLnVlkRFio6cthXbyK9KMje15lrXobCbv2ZqiAP8kWDuM6tBSF93T6nOcWa9lRc8EnPOw8lvNoT8Kns5Rh9CD89ECzWSWRXl24eKwm+/MqVSKxdz8QeDe+6Z68A=="
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "loanApplyId": "1478182500907044865",
+    "loanApplyStatus": "1"
+  }
+}
+response &lt;Response [200]&gt;
+5CMdH1UNwV89TA3s
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.22' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_22_审批系统获取登录set_cookie</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+            通过</a>
+
+        <div id='div_pt1.22' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.22').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.22: request {}
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"/&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"/&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+    &lt;title&gt;登录&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://static-dev-1301461107.cos.ap-chengdu.myqcloud.com/runthink-service-key/statics/css/login.css"/&gt;
+    &lt;script src="https://static-dev-1301461107.cos.ap-chengdu.myqcloud.com/runthink-service-key/statics/js/login.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="bigBox"&gt;
+    &lt;div class="rightBox"&gt;
+        &lt;form name="form" th:action="@{/login}" method="post" class="loginBox"&gt;
+            &lt;div class="loginWord"&gt;登录&lt;/div&gt;
+            &lt;label&gt;
+                &lt;input type="text" name="username" required class="userInput" placeholder="请输入用户名"/&gt;
+            &lt;/label&gt;
+            &lt;div class="passwordBox"&gt;
+                &lt;label for="password"&gt;
+                    &lt;input type="password" name="password" required class="passwordInput" placeholder="请输入密码"/&gt;
+                &lt;/label&gt;
+                &lt;a class="close" id="showEye" onclick="switchPw()"&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="forgetWord"&gt;
+                &lt;a href="javascript:;" class="forgetA"&gt;忘记密码&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="loginBtn"&gt;登录&lt;/button&gt;
+            &lt;p style="color: #FF0000"&gt;&lt;/p&gt;
+        &lt;/form&gt;
+        &lt;div class="tip"&gt;
+          &lt;span class="tipSpan"&gt;
+            新希望供应链金融（广东）有限公司&lt;br/&gt;
+            粤ICP备2020115972
+          &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+traceId:  PqoAK3oy836CVrNX
+响应不是json
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.23' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_23_审批系统token获取</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.23')" >
+            通过</a>
+
+        <div id='div_pt1.23' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.23').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.23: request {
+  "username": "wangzq1",
+  "password": "123456"
+}
+
+traceId:  3t8sjMmcKe5n6p80
+
+W8k1hk57cVE28lGp
+响应不是json
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.24' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_24_审批系统查询提款审批任务</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.24')" >
+            通过</a>
+
+        <div id='div_pt1.24' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.24').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.24: request {
+  "taskId": "1478182515264167938"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+2A9bxo5wdLPTo9uP
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.25' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_25_审批系统提款任务审批通过</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+            通过</a>
+
+        <div id='div_pt1.25' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.25').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.25: request {
+  "enterpriseBusinessLicense": {
+    "id": "1478182516325326849",
+    "compId": "7",
+    "taskId": "1478182515264167938",
+    "companyName": "接口测试专用有限公司",
+    "socialCode": "632323197407098700",
+    "regCapital": "5000000.00",
+    "establishDate": "2018-12-01"
+  },
+  "enterpriseLegalIdCard": {
+    "id": "1478182516337909761",
+    "compId": "11",
+    "taskId": "1478182515264167938",
+    "name": "尉迟行",
+    "idCard": "45082120001213386X",
+    "sex": "0",
+    "nation": "中国",
+    "issuedBy": "成都市锦江区琉璃厂公安局"
+  },
+  "operatorInfo": {
+    "id": "1478182516367269889",
+    "compId": "41",
+    "taskId": "1478182515264167938",
+    "operatorName": "吕宜",
+    "operatorIdCard": "411527198302072669",
+    "operatorContractInfo": "18805444341"
+  },
+  "receiveAccountsCollect": {
+    "id": "1478182516346298369",
+    "compId": "43",
+    "taskId": "1478182515264167938",
+    "totalAmount": "110000.00",
+    "matchAmount": "1000.00"
+  },
+  "receiveAccountsDetail": [
+    {
+      "sequenceNo": "ineterfaceId0012z72",
+      "compId": "44",
+      "groupIndex": "0",
+      "taskId": "1478182515264167938",
+      "payerName": "接口测试专用支付企业",
+      "receiveName": "接口测试专用",
+      "cashDate": "2022-06-24",
+      "amount": "1000.00",
+      "availableAmount": "1000.00",
+      "loanAmount": "0.00",
+      "status": "0",
+      "id": "1478182516358881281"
+    }
+  ],
+  "taskFile": [
+    {
+      "id": "1478182516308549634",
+      "taskId": "1478182515264167938",
+      "compId": "11",
+      "fileId": "1473838636465356802",
+      "fileType": "png",
+      "uri": "7047a383-9a91-4fed-9e2c-c37e7f5ace8f",
+      "compAttributeId": "86"
+    },
+    {
+      "id": "1478182516312743938",
+      "taskId": "1478182515264167938",
+      "compId": "11",
+      "fileId": "1473838622729011201",
+      "fileType": "png",
+      "uri": "735ac8a4-7e45-4515-a4ed-87303782e382",
+      "compAttributeId": "86"
+    },
+    {
+      "id": "1478182516312743939",
+      "taskId": "1478182515264167938",
+      "compId": "7",
+      "fileId": "1473838714001260545",
+      "fileType": "png",
+      "uri": "bded548e-88c5-4c2b-b6b3-11db3b5ceadc",
+      "compAttributeId": "47"
+    }
+  ],
+  "approvalFinanceAmount": "1000.00",
+  "creditRate": 0,
+  "approvalFinanceRepayType": "30",
+  "approvalFinancePeriod": "83",
+  "remarks": "",
+  "approvalDesc": "接口自动化提款审批数据勿动",
+  "taskId": "1478182515264167938"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": true
+}
+response &lt;Response [200]&gt;
+QweXL98861IxYPbU
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft1.26' class='none'>
+        <td class='failCase'><div class='testcase'>test_info_26_跑日终批量</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.26')" >
+            失败</a>
+
+        <div id='div_ft1.26' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.26').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft1.26: request {
+  "id": 2
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": 200,
+  "msg": null,
+  "content": null
+}
+response &lt;Response [200]&gt;
+None
+Traceback (most recent call last):
+  File "C:\Users\wangzhiqiang\AppData\Local\Programs\Python\Python39\lib\site-packages\ddt.py", line 190, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\wangzhiqiang\PycharmProjects\pythonProject\suite\testCaseSuite.py", line 80, in test_info
+    self.assertTrue(res, True)
+AssertionError: False is not true : True
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft1.27' class='none'>
+        <td class='errorCase'><div class='testcase'>test_info_27_供应商还款试算</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.27')" >
+            错误</a>
+
+        <div id='div_ft1.27' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.27').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft1.27: request {
+  "loanNos": [
+    ""
+  ]
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "totalAmount": 6013.06,
+    "principalAmount": 6000.0,
+    "interestAmount": 13.06,
+    "penInterestAmount": 0.0,
+    "interestFee": 13.06,
+    "payOffFeeAmount": 0,
+    "feeAmount": 0,
+    "loanNos": [
+      "1475374673914187779",
+      "1478169998563430402",
+      "1478173266542809091",
+      "1478175153711173634",
+      "1478181044325928963",
+      "1478182500907044866"
+    ]
+  }
+}
+response &lt;Response [200]&gt;
+LyUCBH86NNPw281C
+Traceback (most recent call last):
+  File "C:\Users\wangzhiqiang\PycharmProjects\pythonProject\suite\testCaseSuite.py", line 54, in tearDown
+    CaseAssemble.save_req_res(self.casedata['save_req_res'], req, self.r)
+  File "C:\Users\wangzhiqiang\PycharmProjects\pythonProject\Utils\case_utils\caseAssemble.py", line 273, in save_req_res
+    type = var1[1]
+IndexError: list index out of range
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt1.28' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_info_28_回单下载密钥获取</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.28')" >
+            通过</a>
+
+        <div id='div_pt1.28' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.28').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt1.28: request {
+  "srcCode": "yunlibao_100001"
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "0",
+  "msg": "成功",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": {
+    "privateKey": "b382d9bea05e201fd54886ec3a1e9089",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqXBO678NiWoST57t70kUteDGoC4hHnh3N1nkUQiWHVm5plVncLX7ZFX0WXBvlhfl3XZWDFhooFTdAWqxmv11p7Rb92RkHkaP8etT7A0y5URNK5yIYKXwWbEq_NIA7AFa71FXbvoMh3_RrRTjEM1qHcpV_o2KbSE5Eb8VeQeNsOqJSJ-e4UJEgjm5yK5ZFirRP1SC6i6iSzM_wa2Rtm9iiU6Rf5m5T_hAjkjx9mns3oxZMwsvjI4xM--LG7-T6CUNiIVpv3Lax8VbkYlDRaX-Kx_zFO5_bQBKpPwO_4mh7RUPBKypUhT8gqFBRcVzbTTrLP-AzE9zaqleL9qUfPQV4wIDAQAB"
+  }
+}
+response &lt;Response [200]&gt;
+V4w2aGv00wYm7wM1
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft1.29' class='none'>
+        <td class='failCase'><div class='testcase'>test_info_29_供应商还款</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.29')" >
+            失败</a>
+
+        <div id='div_ft1.29' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.29').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft1.29: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqXBO678NiWoST57t70kUteDGoC4hHnh3N1nkUQiWHVm5plVncLX7ZFX0WXBvlhfl3XZWDFhooFTdAWqxmv11p7Rb92RkHkaP8etT7A0y5URNK5yIYKXwWbEq_NIA7AFa71FXbvoMh3_RrRTjEM1qHcpV_o2KbSE5Eb8VeQeNsOqJSJ-e4UJEgjm5yK5ZFirRP1SC6i6iSzM_wa2Rtm9iiU6Rf5m5T_hAjkjx9mns3oxZMwsvjI4xM--LG7-T6CUNiIVpv3Lax8VbkYlDRaX-Kx_zFO5_bQBKpPwO_4mh7RUPBKypUhT8gqFBRcVzbTTrLP-AzE9zaqleL9qUfPQV4wIDAQAB
+Public RSA key at 0x2C026529FA0
+msRWadjYmQI/5hkkQloH/fEJs3n9H+4SC7a6sCX8B1iLwkjCzPxHfFpdilHWzpiEdSGueD3le/Tse/T1O59/R97kn9AsYgZM9UFeGLZmphCQ3f28YtVqYA0L2zpvmoOTZdmaCgm/ivRwZz6YzUeiocIPP2zqplNDdVJetWmDntJY1cvEZQaeX806yA3Jwg2MPopFSWJjcjk8fK9dWOqftl8AXUbGDrUBZeo7IFyVZryTi7Ms0U7C2zE8FGwMPJkpjkUc+c74EhEnV7jF1EhYgsGYj7KScqM64bK6l2eB8103lfcVmr7rvYfsHg/JqiCF3XMj/w67/x7/YQKiGK1Ifw==
+request {
+  "loanNos": [
+    "1478182500907044866"
+  ],
+  "principalAmount": "6000.0",
+  "totalAmount": "6013.06",
+  "privateKey": "b382d9bea05e201fd54886ec3a1e9089",
+  "txPassword": "msRWadjYmQI/5hkkQloH/fEJs3n9H+4SC7a6sCX8B1iLwkjCzPxHfFpdilHWzpiEdSGueD3le/Tse/T1O59/R97kn9AsYgZM9UFeGLZmphCQ3f28YtVqYA0L2zpvmoOTZdmaCgm/ivRwZz6YzUeiocIPP2zqplNDdVJetWmDntJY1cvEZQaeX806yA3Jwg2MPopFSWJjcjk8fK9dWOqftl8AXUbGDrUBZeo7IFyVZryTi7Ms0U7C2zE8FGwMPJkpjkUc+c74EhEnV7jF1EhYgsGYj7KScqM64bK6l2eB8103lfcVmr7rvYfsHg/JqiCF3XMj/w67/x7/YQKiGK1Ifw=="
+}
+----------------------------------------------------------------------------------------------------------------------------
+response {
+  "code": "1140110007",
+  "msg": "还款金额不符",
+  "extSrcCode": null,
+  "extSrcMessage": null,
+  "data": null
+}
+response &lt;Response [200]&gt;
+NGAl1BAkDudj2TNG
+Traceback (most recent call last):
+  File "C:\Users\wangzhiqiang\AppData\Local\Programs\Python\Python39\lib\site-packages\ddt.py", line 190, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\wangzhiqiang\PycharmProjects\pythonProject\suite\testCaseSuite.py", line 80, in test_info
+    self.assertTrue(res, True)
+AssertionError: False is not true : True
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>29</td>
+    <td>26</td>
+    <td>2</td>
+    <td>1</td>
+	<td>通过率：89.66%</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+<script>
+    drawCircle(26, 2, 1)
+</script>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
